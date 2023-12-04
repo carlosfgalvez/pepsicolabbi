@@ -1,0 +1,99 @@
+body {
+  background-image: url("../images/calorcitogracias/background.webp");
+  background-position: top center;
+  background-size: 100% auto;
+}
+
+header .nav {
+  background-color: var(--first-color);
+}
+.nav-link {
+  color: var(--first-color-light) !important;
+}
+.nav-link:hover {
+  color: var(--white-color) !important;
+}
+.banner {
+  background-image: url("../images/calorcitogracias/banner_background.webp");
+  background-position: top center;
+  background-size: auto 100%;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: 1;
+}
+.banner img {
+  width: 95%;
+  max-width: 820px;
+}
+
+.subbanner {
+  background-image: url("../images/calorcitogracias/subbanner_background.webp");
+  background-position: top center;
+  background-size: auto 100%;
+  padding-top: 50px;
+  padding-bottom: 40px;
+  position: relative;
+  z-index: -1;
+  min-height: 700px;
+}
+.subbanner img {
+  width: 95%;
+  max-width: 400px;
+  padding-top: 30px;
+}
+.subbanner .separador {
+  width: 70%;
+  height: 2px;
+  background-color: #f7ba60;
+  margin: 10px auto;
+}
+
+.container {
+  max-width: 1000px;
+  margin-top: -100px;
+}
+.btn.enviar {
+  min-width: 200px;
+  margin-top: 0;
+  border-radius: 30px;
+}
+
+footer {
+  background-color: var(--first-color);
+  padding: 10px;
+}
+footer .nav-link {
+  color: white !important;
+  font-family: "open sans", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
+footer .nav-link:hover {
+  color: var(--white-color) !important;
+}
+footer .pepsico {
+  max-width: 120px;
+}
+
+@media screen and (max-width: 950px) {
+  .banner {
+    padding-top: 30px;
+    padding-bottom: 20px;
+  }
+  .banner_encuesta {
+    height: 110px;
+  }
+
+  .subbanner {
+    min-height: 500px;
+  }
+  .subbanner img {
+    width: 65%;
+    padding-top: 0px;
+  }
+  .subbanner .title {
+    font-size: 18px !important;
+  }
+  .subbanner .text {
+    font-size: 16px !important;
+  }
+}
