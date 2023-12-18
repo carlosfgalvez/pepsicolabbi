@@ -141,13 +141,12 @@ public function VerEncuestasEnviadas($idencrypt=null) {
       $data['hoy']       = $hoy;
       $data['registros'] = $registros;
 
-      $data['view_navbar'] = view('template/navbar',$data);
       $view = "admin/descargalog";
     } else {
       $view = "home/login";
     }
 
-    var_dump($data);
+    // var_dump($data);
     return view($view,$data);
   }
 
