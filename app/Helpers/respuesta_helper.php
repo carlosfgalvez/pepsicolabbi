@@ -1,4 +1,5 @@
 <?php
+use App\Models\ContactosModel;
 use App\Models\EncuestaModel;
 use App\Models\EncuestaPreguntasModel;
 use App\Models\EncuestaPreguntaOpcionesModel;
@@ -169,6 +170,52 @@ function enviar_encuesta_datospersonales($nom,$ema,$cel){
     $cod      = -3;
     $mensaje = "Error de validación de datos";
     log_write_bd(0,'ENCUESTA','ERROR',$mensaje.' ('.$cod.')');
+    //$mensaje = "Error de validación de datos ".$e->getMessage();
+  }
+ 	return $result = $cod.';'.$mensaje;
+}
+
+/* enviar datos registro home */
+function enviar_form_registro_home($nom,$ema,$cel){
+  $result 	    = 0;
+  $cod          = 0;
+  $mensaje      = "";
+
+  try{
+    $hoy   = date("Y-m-d H:i:s");
+    // $idenv = getParamSession('idenv');
+          $nombre     = strtoupper(strip_tags($nom));
+          $email      = strtoupper(strip_tags($ema));
+          $celular    = strtoupper(strip_tags($cel));
+
+          $nombre           = substr(str_replace("'","\'",$nombre),0,50);
+          $email            = substr($email,0,50);
+          $celular          = substr($celular,0,45);
+
+          $datos=[
+            'nombre'     =>$nombre,
+            'correo'     =>$ema,
+            'telefono'   =>$celular,
+            'fecha' =>$hoy,
+          ];
+
+          // Guardar el registro
+          $contactomodel = new ContactosModel();
+      		if ($contactomodel->insert($datos)) {
+            $cod           = 0;
+            $mensaje       = "Tus datos fueron recibidos y pronto te contactaremos";
+            log_write_bd(Null,'REGISTRO HOME','OK',$mensaje.' '.$nombre.' '.$ema.' '.$celular,0);
+
+          } else {
+            $cod    = -1;
+            $mensaje = "Ha ocurrido un error al guardar el registro con los datos personales";
+            log_write_bd(0,'REGISTRO HOME','ERROR',$mensaje.' ('.$cod.')');
+          }
+   
+  } catch (\Exception $e) {
+    $cod      = -3;
+    $mensaje = "Error de validación de datos";
+    log_write_bd(0,'REGISTRO HOME','ERROR',$mensaje.' ('.$cod.')');
     //$mensaje = "Error de validación de datos ".$e->getMessage();
   }
  	return $result = $cod.';'.$mensaje;
@@ -582,6 +629,34 @@ function get_logs_descarga(&$count) {
   }
   return $salida;
   //return $salida =$count."<separador>".$consulta;
+}
+
+function get_all_records(){
+  $salida = "";
+  $count  = 0;
+  $nombre = "";
+
+  try {
+    $db = db_connect();
+    $query = "SELECT * FROM view_contactos";
+
+    $registros = $db->query($query);
+    foreach ($registros->getResultArray() as $reg) {
+            $salida  .= "<tr>
+                          <td style='text-align: center;'>".$reg["id"]."</td>
+                          <td style='text-align: center;'>".$reg["nombre"]."</td>
+                          <td style='text-align: left;'>".$reg["correo"]."</td>
+                          <td style='text-align: left;'>".$reg["telefono"]."</td>
+                          <td style='text-align: left;'>".$reg["fecha"]."</td>
+                      </tr>";
+    }
+    $count  = $registros->getNumRows();
+    $db->close();
+  } catch (\Exception $e) {
+    $salida = $e->getMessage();
+  }
+  return $salida.'<->'.$count;
+  
 }
 
 /***************************************************************************/

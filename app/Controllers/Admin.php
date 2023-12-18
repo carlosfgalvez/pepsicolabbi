@@ -76,6 +76,45 @@ class Admin extends BaseController
     return view($view,$data);
 }
 
+/* ver registros de encuestas enviadas */
+public function VerEncuestasEnviadas($idencrypt=null) {
+  $ide= encrypt_decrypt('d',$idencrypt);
+  // Obtener datos comunes a todas las vistas
+  $data = $this->getData('admin');  // BaseController
+
+  // Validar la sessión
+  if (validDataSession($token,$rol)) {
+    // get encuesta
+    $enc  = get_encuesta($ide);
+
+    // Obtener datos del usuario
+    $id  = $data['id'];
+    //$data['reg'] = get_registro_admin($id);
+
+    $hoy 	      = date("d-m-Y H:i:s");
+    $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
+    $titulo     = $enc['nombre'];
+    $count      = 0;
+    $registros  = get_encuesta_descarga($ide,$count);
+    $config     = get_config_bd();
+
+    $data['config']    = $config;
+    $data['filename']  = $filename;
+    $data['titulo']    = $titulo;
+    $data['count']     = $count;
+    $data['hoy']       = $hoy;
+    $data['registros'] = $registros;
+    $data['id_encuesta'] = $idencrypt;
+
+    $data['view_navbar'] = view('template/navbar',$data);
+    $view = "admin/verEncuestasEnviadas";
+  } else {
+    $view = "home/login";
+  }
+
+  return view($view,$data);
+}
+
   /* log descarga */
   public function logdescarga() {
 

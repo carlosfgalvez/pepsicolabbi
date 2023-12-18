@@ -58,6 +58,19 @@ class Respuesta extends BaseController
        	  break;
       case 6:  /* envio email recuperar contraseña*/
        	  break;
+      case 7:  /* registro home */
+          /* Obtener parametros */
+          $nom   	= strip_tags($this->request->getVar('nom'));
+          $ema     = strip_tags($this->request->getVar('ema'));
+          $cel     = strip_tags($this->request->getVar('cel'));
+
+          if (validarEntradaSql($nom)&&validarEntradaSql($ema)&validarEntradaSql($cel))
+          {
+            $result = enviar_form_registro_home($nom,$ema,$cel);
+          }
+          else { mensaje_error(); }
+
+          break;
 
       /***************************************************/
       /*******************  CONSULTAS ********************/

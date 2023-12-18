@@ -24,6 +24,7 @@ $routes->get('login','Home::login');
 /* admin perfil */
 $routes->get('admin','Admin::index');
 $routes->get('admin/encuestadescarga/(:any)','Admin::encuestadescarga/$1');
+$routes->get('admin/verenviadas/(:any)','Admin::VerEncuestasEnviadas/$1');
 $routes->get('admin/logdescarga','Admin::logdescarga');
 
 /* tabla settings */
@@ -49,6 +50,11 @@ $routes->get('encuestas/create','Encuestas::create');
 $routes->get('encuestas/edit/(:any)','Encuestas::edit/$1');
 $routes->post('encuestas/save','Encuestas::save');
 $routes->get('encuestas/delete/(:any)','Encuestas::delete/$1');
+
+/* Tabla Contactos*/
+$routes->get('contactos','Contactos::VerContactos');
+$routes->get('contactos/descargaContactos','Contactos::DescargaContactos');
+
 
 /* tabla encuestas_preguntas */
 $routes->get('preguntas','Encuestas::indexpreg');
