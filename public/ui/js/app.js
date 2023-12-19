@@ -210,8 +210,8 @@ function enviarDatosPersonalesRegistroHome(nombre, email, celular, url) {
         //var id  = data.split(";")[2];
         if (res == 0) {
           $("#datospersonales").css("display", "none");
-          $("#msg_enviar").text(msg);
-          //$('#msg_enviar').css("display","block");
+          $("#msg").text(msg);
+          $("#mainmsg").removeClass("hide");
         } else {
           $("#msg_enviar_error").text(msg);
           $("#msg_enviar_error").css("display", "block");

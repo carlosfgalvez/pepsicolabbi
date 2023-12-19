@@ -14,11 +14,19 @@
   -->
 
     <!--<h3 class="mt-5"> BANNER CON LOS DIFERENTES PRODUCTOS DE INNOVACIÓN </h3>-->
-    <ul id="bannershome" class="owl-carousel">
+    <ul id="bannershome" class="owl-carousel owl-theme">
+
         <?php foreach($banners as $reg): ?>
-        <img src="<?=$url_base;?><?=$upload_dir;?>/<?=$reg['imagen1'];?>" width="100" class="d-inline-block align-top"
-            style="border-radius: 5px;" alt="">
+        <div>
+            <p>
+            <h3><?=$reg['nombre'];?></h3>
+            </p>
+            <img src="<?=$url_base;?><?=$upload_dir;?>/<?=$reg['imagen1'];?>" width="100"
+                class="d-inline-block align-top" style="border-radius: 5px;" alt="">
+            <p><?=$reg['descripcion'];?></p>
+        </div>
         <?php endforeach; ?>
+
     </ul>
 
     <?php foreach($encuestas as $reg): ?>
@@ -51,6 +59,9 @@
     <?php endforeach; ?>
 
     <!-- form registro -->
+    <main class="px-3 pb-5 mb-5 container toggle-quit hide" id="mainmsg">
+        <div class="fs-3" id="msg"></div>
+    </main>
     <main class="px-3 pb-5 mb-5 container toggle-quit" id="datospersonales">
         <div class="row">
             <div class="col-12 col-md-6 text-start mb-4">
@@ -106,6 +117,10 @@
 <script>
 $(document).ready(function() {
     var url = "<?=$url_base; ?>";
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        autoplay: true,
+    });
 
     $('#btnEnviar').on('click', function(e) {
         e.preventDefault();
@@ -119,6 +134,5 @@ $(document).ready(function() {
         }
     });
 
-    //$('.owl-carousel').owlCarousel();
 });
 </script>
