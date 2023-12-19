@@ -211,7 +211,7 @@ function enviar_form_registro_home($nom,$ema,$cel){
             $mensaje = "Ha ocurrido un error al guardar el registro con los datos personales";
             log_write_bd(0,'REGISTRO HOME','ERROR',$mensaje.' ('.$cod.')');
           }
-   
+
   } catch (\Exception $e) {
     $cod      = -3;
     $mensaje = "Error de validación de datos";
@@ -638,7 +638,7 @@ function get_all_records(){
 
   try {
     $db = db_connect();
-    $query = "SELECT * FROM view_contactos";
+    $query = "SELECT * FROM contactos ORDER BY fecha";
 
     $registros = $db->query($query);
     foreach ($registros->getResultArray() as $reg) {
@@ -656,7 +656,7 @@ function get_all_records(){
     $salida = $e->getMessage();
   }
   return $salida.'<->'.$count;
-  
+
 }
 
 /***************************************************************************/
