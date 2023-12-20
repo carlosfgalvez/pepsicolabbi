@@ -73,9 +73,9 @@
             <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>opciones/1">Configurar Opciones</a>
             <?php if ($count_enviadas>0) { ?>
             <a class="btn btn-primary hide" id="btnVerEnviadas" style="margin: 5px;"
-                href="<?=$url_base;?>admin/verenviadas">Ver Enviadas</a>
+                href="<?=$url_base;?>admin/verenviadas">Encuestas Enviadas</a>
             <?php } ?>
-            <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>contactos ">Registros</a>
+            <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>contactos ">Contactos</a>
             <a class="btn btn-outline-success" style="margin: 5px;" href="<?=$url_base;?>upload">Subir Archivos</a>
             <!--<a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>enviadas">Ver Enviadas</a>-->
         </div>

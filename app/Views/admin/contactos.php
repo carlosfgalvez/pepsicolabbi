@@ -21,7 +21,7 @@
                     <th style='padding: 5px; color: white; background-color: #28458E'>ID</th>
                     <th style='padding: 5px; color: white; background-color: #28458E'>Nombre</th>
                     <th style='padding: 5px; color: white; background-color: #28458E'>Correo</th>
-                    <th style='padding: 5px; color: white; background-color: #28458E'>Telefono</th>
+                    <th style='padding: 5px; color: white; background-color: #28458E'>Teléfono</th>
                     <th style='padding: 5px; color: white; background-color: #28458E'>Fecha de registro</th>
                 </tr>
                 <tbody>

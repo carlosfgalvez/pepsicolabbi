@@ -14,6 +14,7 @@ function get_config_bd(){
         case "activo":            $configcfg['cfg_activo']           = $reg["valor"];  break;
         case "titulo":            $configcfg['cfg_titulo']           = $reg["valor"];  break;
         case "descripcion":       $configcfg['cfg_descripcion']      = $reg["valor"];  break;
+        case "imagen":            $configcfg['cfg_img']              = $reg["valor"];  break;
         case "traza":             $configcfg['cfg_traza']            = $reg["valor"];  break;
         case "pagesize":          $configcfg['cfg_pagesize']         = $reg["valor"];  break;
         case "home":              $configcfg['cfg_home']             = $reg["valor"];

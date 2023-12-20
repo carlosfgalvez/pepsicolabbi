@@ -3,7 +3,6 @@
 
 <main class="px-3 pb-5 mb-5 ">
     <div class="center mt-3" style="background-color: white;font-family: monospace!important;font-size: small;">
-        <h3><?php if (isset($config)) { echo $config['cfg_titulo']; } ?></h3>
         <p>
         <h5><?=$titulo; ?></h5>
         </p>
