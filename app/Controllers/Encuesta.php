@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 class Encuesta extends BaseController
 {
-    public function formulario($id_cod=1): string
+    public function formulario($id_cod=1)
     {
       // Obtener datos comunes a todas las vistas
       $data = $this->getData($id_cod);  // BaseController
@@ -46,13 +46,21 @@ class Encuesta extends BaseController
           mensaje_error();
         }
 
-      } else {
+      } else { //validar
         mensaje_error();
       }
 
+      // $urlenc = str_replace("encuesta/calorcito","",site_url('/home'));
+
+      if ($mensaje != '') {// redireccionar encuestas
+        return redirect()->to('/');
+      }else{
+        return view("encuesta/index",$data);
+      }
       //var_dump($data);
-      //var_dump($enc);
-      return view("encuesta/index",$data);
+      // var_dump($enc);
+        
+        // return route_to('/');
     }
 
     public function gracias(): string

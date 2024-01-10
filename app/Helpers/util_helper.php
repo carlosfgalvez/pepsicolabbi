@@ -39,6 +39,49 @@ function get_list_meses_fecha($mes=null) {
   return $salida;
 }
 
+function get_clases_css($nameimg=null){
+  $salida = "";
+
+  try {
+    $clases = array("momentos","sopas","tiendas");
+    $salida .= '<option value="">Selecciona una opción (opcional)</option>';
+    foreach($clases as $clase){ 
+      if($nameimg == $clase){ 
+        $salida .= '<option value="'.$clase.'" selected>'.$clase.'</option>';
+      }else{
+        $salida .= '<option value="'.$clase.'">'.$clase.'</option>';
+      }
+    }
+  } catch (\Exception $e) {
+    $salida=0;
+  }
+
+  return $salida;
+}
+
+/* Lista de imagenes disponibles*/
+function get_images_anebles($upload_dir,$nameimg=null){
+  $salida = "";
+  $images = array();
+      $arrFiles = scandir($upload_dir);
+      foreach($arrFiles as $file){
+        if($file != '.' && $file != '..'){
+          array_push($images, $file);
+        }
+      }
+  // ----------------------------------
+  $salida .= '<option value="">Selecciona una opción (opcional)</option>';
+      foreach($images as $img){ 
+        if($nameimg == $img){
+          $salida .= '<option value="'.$img.'" selected>'.$img.'</option>';
+        }else{
+          $salida .= '<option value="'.$img.'">'.$img.'</option>';
+        }
+      }
+  // ----------------------------------
+
+  return $salida;
+}
 /* Listado de años */
 function get_list_years_fecha($year=null){
   $salida = "";

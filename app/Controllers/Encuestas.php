@@ -366,6 +366,11 @@ class Encuestas extends BaseController
       $data['idp']        = $idp;
       $data['view_navbar'] = view('template/navbar',$data);
 
+      $data['clases'] = get_clases_css(null);
+
+      $upload_dir = $data['upload_dir'];
+      $data['imagesopc'] = get_images_anebles($upload_dir,null);
+
       return view('encuestas/createopc',$data);
     }
 
@@ -384,6 +389,22 @@ class Encuestas extends BaseController
       $data['reg'] = $encuestapreguntaOpcionesModel->where('id',$ido)->first();
       $data['view_navbar'] = view('template/navbar',$data);
 
+      
+      $imgclass = '';
+      $imgname = '';
+      if($data['reg']['img_opcion'] != ''){
+        $image = explode(";", $data['reg']['img_opcion']);
+        $imgname = $image[0];
+        if(sizeof($image) >= 2){
+          $imgclass = $image[1];
+        }
+      }
+      
+      $data['clases'] = get_clases_css($imgclass);
+
+      $upload_dir = $data['upload_dir'];
+      $data['imagesopc'] = get_images_anebles($upload_dir,$imgname); 
+      
       return view('encuestas/editopc',$data);
     }
 
@@ -399,10 +420,18 @@ class Encuestas extends BaseController
       $input            = $this->request->getVar('input');
       $requerido        = $this->request->getVar('requerido');
       $imgopcion        = $this->request->getVar('img_opcion');
+      $claseopcion      = $this->request->getVar('img_clase');
       $imgalto          = $this->request->getVar('img_alto');
       $imgancho         = $this->request->getVar('img_ancho');
       $orden            = $this->request->getVar('orden');
       $activo           = $this->request->getVar('activo');
+
+      if($claseopcion != ''){
+        $imagenoption = $imgopcion.';'.$claseopcion;
+      }else{
+        $imagenoption = $imgopcion;
+      }
+      
 
       if ($this->validate('opciones')) {  // Ok
         $datos=[
@@ -411,7 +440,7 @@ class Encuestas extends BaseController
           'opcion'=>$opcion,
           'input'=>$input,
           'requerido'=>$requerido,
-          'img_opcion'=>$imgopcion,
+          'img_opcion'=>$imagenoption,
           'img_alto'=>$imgalto,
           'img_ancho'=>$imgancho,
           'orden'=>$orden,

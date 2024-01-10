@@ -1,0 +1,161 @@
+CRITICAL - 2024-01-09 10:52:57 --> Undefined array key "vigente"
+in APPPATH\Controllers\Encuesta.php on line 56.
+ 1 APPPATH\Controllers\Encuesta.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "vigente"', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Encuesta.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuesta->formulario('calorcito')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 10:53:37 --> App\Controllers\Encuesta::formulario(): Return value must be of type string, none returned
+in APPPATH\Controllers\Encuesta.php on line 60.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuesta->formulario('calorcito')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuesta))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 10:54:02 --> App\Controllers\Encuesta::formulario(): Return value must be of type string, null returned
+in APPPATH\Controllers\Encuesta.php on line 54.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuesta->formulario('calorcito')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuesta))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 10:59:57 --> Invalid file: "home.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('home.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('home', [], true)
+ 3 APPPATH\Controllers\Encuesta.php(59): view('home', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuesta->formulario('calorcito')
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuesta))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 11:01:15 --> Undefined variable $banners
+in APPPATH\Views\home\index.php on line 7.
+ 1 APPPATH\Views\home\index.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $banners', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\home\\index.php', 7)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('home/index', [], true)
+ 5 APPPATH\Controllers\Encuesta.php(59): view('home/index')
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuesta->formulario('calorcito')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuesta))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 11:04:51 --> App\Controllers\Encuesta::formulario(): Return value must be of type string, none returned
+in APPPATH\Controllers\Encuesta.php on line 59.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuesta->formulario('calorcito')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuesta))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 12:34:14 --> App\Controllers\Encuesta::formulario(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\Encuesta.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuesta->formulario('calorcito')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuesta))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 12:36:37 --> App\Controllers\Encuesta::formulario(): Return value must be of type string, CodeIgniter\HTTP\RedirectResponse returned
+in APPPATH\Controllers\Encuesta.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuesta->formulario('calorcito')
+ 2 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuesta))
+ 3 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 13:54:29 --> Trying to access array offset on value of type int
+in APPPATH\Views\admin\upload.php on line 9.
+ 1 APPPATH\Views\admin\upload.php(9): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type int', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\upload.php', 9)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\upload.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/upload', [], true)
+ 5 APPPATH\Controllers\Admin.php(171): view('admin/upload', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->upload()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 14:44:41 --> Undefined variable $img
+in APPPATH\Controllers\Encuestas.php on line 391.
+ 1 APPPATH\Controllers\Encuestas.php(391): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $img', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Encuestas.php', 391)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->editopc('53', '8', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 16:39:11 --> Array to string conversion
+in APPPATH\Controllers\Encuestas.php on line 406.
+ 1 APPPATH\Controllers\Encuestas.php(406): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Encuestas.php', 406)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->editopc('54', '8', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 16:39:44 --> Undefined variable $registro
+in APPPATH\Controllers\Encuestas.php on line 405.
+ 1 APPPATH\Controllers\Encuestas.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $registro', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Encuestas.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->editopc('54', '8', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 16:40:18 --> Array to string conversion
+in APPPATH\Controllers\Encuestas.php on line 405.
+ 1 APPPATH\Controllers\Encuestas.php(405): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Encuestas.php', 405)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->editopc('54', '8', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 17:24:07 --> Undefined array key "reg"
+in APPPATH\Controllers\Encuestas.php on line 369.
+ 1 APPPATH\Controllers\Encuestas.php(369): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "reg"', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Encuestas.php', 369)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->createopc('8', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 17:24:39 --> Undefined variable $imagesopc
+in APPPATH\Views\encuestas\createopc.php on line 50.
+ 1 APPPATH\Views\encuestas\createopc.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $imagesopc', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\encuestas\\createopc.php', 50)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\encuestas\\createopc.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('encuestas/createopc', [], true)
+ 5 APPPATH\Controllers\Encuestas.php(380): view('encuestas/createopc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->createopc('8', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 17:25:49 --> Undefined variable $imagesopc
+in APPPATH\Views\encuestas\createopc.php on line 50.
+ 1 APPPATH\Views\encuestas\createopc.php(50): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $imagesopc', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\encuestas\\createopc.php', 50)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\encuestas\\createopc.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('encuestas/createopc', [], true)
+ 5 APPPATH\Controllers\Encuestas.php(380): view('encuestas/createopc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->createopc('8', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 17:42:48 --> Undefined array key 1
+in APPPATH\Controllers\Encuestas.php on line 394.
+ 1 APPPATH\Controllers\Encuestas.php(394): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Encuestas.php', 394)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->editopc('71', '20', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 17:47:34 --> Undefined array key 1
+in APPPATH\Controllers\Encuestas.php on line 394.
+ 1 APPPATH\Controllers\Encuestas.php(394): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Encuestas.php', 394)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->editopc('54', '8', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 18:03:13 --> Undefined variable $img
+in APPPATH\Views\encuestas\editopc.php on line 34.
+ 1 APPPATH\Views\encuestas\editopc.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $img', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\encuestas\\editopc.php', 34)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\encuestas\\editopc.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('encuestas/editopc', [], true)
+ 5 APPPATH\Controllers\Encuestas.php(408): view('encuestas/editopc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->editopc('71', '20', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-09 19:00:57 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\encuestas\createopc.php on line 47.
+ 1 APPPATH\Views\encuestas\createopc.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\encuestas\\createopc.php', 47)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\encuestas\\createopc.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('encuestas/createopc', [], true)
+ 5 APPPATH\Controllers\Encuestas.php(374): view('encuestas/createopc', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Encuestas->createopc('8', 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Encuestas))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
