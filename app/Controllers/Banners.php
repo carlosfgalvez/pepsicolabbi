@@ -53,6 +53,7 @@ class Banners extends BaseController
       $upload_dir = $data['upload_dir'];
       $data['imagesopc1'] = get_images_anebles($upload_dir,null);
       $data['imagesopc2'] = get_images_anebles($upload_dir,null);
+      $data['activo'] = list_si_no(null);
 
       $data['view_navbar'] = view('template/navbar',$data);
       return view('banners/create',$data);
@@ -75,6 +76,7 @@ class Banners extends BaseController
       $upload_dir = $data['upload_dir'];
       $data['imagesopc1'] = get_images_anebles($upload_dir,$img1);
       $data['imagesopc2'] = get_images_anebles($upload_dir,$img2);
+      $data['activo'] = list_si_no($data['reg']['activo']);
       
       return view('banners/edit',$data);
     }

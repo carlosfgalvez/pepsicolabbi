@@ -1,0 +1,11 @@
+CRITICAL - 2024-01-11 10:32:17 --> Undefined variable $imgname
+in APPPATH\Views\banners\list.php on line 44.
+ 1 APPPATH\Views\banners\list.php(44): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $imgname', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\banners\\list.php', 44)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\banners\\list.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('banners/list', [], true)
+ 5 APPPATH\Controllers\Banners.php(46): view('banners/list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Banners->index('1')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Banners))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

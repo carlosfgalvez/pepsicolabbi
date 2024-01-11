@@ -64,6 +64,9 @@ class Encuestas extends BaseController
       $upload_dir = $data['upload_dir'];
       $data['imagesopcpor'] = get_images_anebles($upload_dir,null);
       $data['imagesopcfon'] = get_images_anebles($upload_dir,null);
+      $data['personales'] = list_si_no(null);
+      $data['duplicidad'] = list_si_no(null);
+      $data['activo'] = list_si_no(null);
 
       return view('encuestas/create',$data);
     }
@@ -86,6 +89,10 @@ class Encuestas extends BaseController
       $upload_dir = $data['upload_dir'];
       $data['imagesopcpor'] = get_images_anebles($upload_dir,$portada);
       $data['imagesopcfon'] = get_images_anebles($upload_dir,$background);
+
+      $data['personales'] = list_si_no($data['reg']['datos_personales']);
+      $data['duplicidad'] = list_si_no($data['reg']['duplicidad']);
+      $data['activo'] = list_si_no($data['reg']['activo']);
 
       return view('encuestas/edit',$data);
     }
@@ -224,6 +231,9 @@ class Encuestas extends BaseController
       $data['ideencryp']  = $ideencryp;
       $data['ide']        = encrypt_decrypt('d',$ideencryp);
       $data['view_navbar'] = view('template/navbar',$data);
+      $data['requerido'] = list_si_no(null);
+      $data['activo'] = list_si_no(null);
+      $data['tipos'] = list_tipo_campo(null);
 
       return view('encuestas/createpreg',$data);
     }
@@ -240,6 +250,9 @@ class Encuestas extends BaseController
       $encuestapreguntasModel = new EncuestaPreguntasModel();
       $data['reg'] = $encuestapreguntasModel->where('id',$id)->first();
       $data['view_navbar'] = view('template/navbar',$data);
+      $data['requerido'] = list_si_no($data['reg']['requerido']);
+      $data['activo'] = list_si_no($data['reg']['activo']);
+      $data['tipos'] = list_tipo_campo($data['reg']['tipo']);
 
       return view('encuestas/editpreg',$data);
     }
@@ -380,6 +393,9 @@ class Encuestas extends BaseController
 
       $upload_dir = $data['upload_dir'];
       $data['imagesopc'] = get_images_anebles($upload_dir,null);
+      $data['input'] = list_si_no(null);
+      $data['requerido'] = list_si_no(null);
+      $data['activo'] = list_si_no(null);
 
       return view('encuestas/createopc',$data);
     }
@@ -414,6 +430,10 @@ class Encuestas extends BaseController
 
       $upload_dir = $data['upload_dir'];
       $data['imagesopc'] = get_images_anebles($upload_dir,$imgname); 
+      $data['input'] = list_si_no($data['reg']['input']);
+      $data['requerido'] = list_si_no($data['reg']['requerido']);
+      $data['activo'] = list_si_no($data['reg']['activo']);
+      $data['back'] = $_SERVER['HTTP_REFERER'];
       
       return view('encuestas/editopc',$data);
     }

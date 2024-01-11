@@ -23,11 +23,14 @@
                 <input id="opcion" value="<?= $reg['opcion'];?>" class="form-control" type="text" name="opcion"></input>
 
                 <label for="input">Input (S/N)</label>
-                <input id="input" value="<?= $reg['input'];?>" class="form-control" type="text" name="input"></input>
+                <select name="input" id="input" class="form-control">
+                    <?php echo $input;?>
+                </select>
 
                 <label for="requerido">Requerido (S/N)</label>
-                <input id="requerido" value="<?= $reg['requerido'];?>" class="form-control" type="text"
-                    name="requerido"></input>
+                <select name="requerido" id="requerido" class="form-control">
+                    <?php echo $requerido;?>
+                </select>
 
                 <div class="container mt-3">
                     <div class="row">
@@ -56,15 +59,13 @@
                 <input id="img_ancho" value="<?= $reg['img_ancho'];?>" class="form-control" type="text"
                     name="img_ancho"></input>
 
-                <label for="orden">Orden</label>
-                <input id="orden" value="<?= $reg['orden'];?>" class="form-control" type="text" name="orden"></input>
-
                 <label for="activo">Activo (S/N)</label>
-                <input id="activo" value="<?= $reg['activo'];?>" class="form-control" type="text" name="activo"></input>
-
+                <select name="activo" id="activo" class="form-control">
+                    <?php echo $activo;?>
+                </select>
             </div>
             <br />
-            <a href="<?=$url_base.'opciones';?>" class="btn btn-outline-warning" role="button">Cancelar</a>
+            <a href="<?=$back;?>" class="btn btn-outline-warning cancela" role="button">Cancelar</a>
             <button class="btn btn-success" type="submit">Guardar</button>
     </div>
 </div>

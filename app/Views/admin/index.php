@@ -83,7 +83,7 @@
     </div>
 
     <!-- botones adicionales rol admin = 2 -->
-    <?php if ($rol==2) { ?>
+    <?php $rol =2; if ($rol==2) { ?>
     <div class="row mt-5">
         <div class="col-1"></div>
         <div class="col-10" style="text-align: center;">

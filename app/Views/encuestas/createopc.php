@@ -35,11 +35,14 @@
                 <input id="opcion" value="<?= old('opcion');?>" class="form-control" type="text" name="opcion"></input>
 
                 <label for="input">Input (S/N)</label>
-                <input id="input" value="<?= old('input');?>" class="form-control" type="text" name="input"></input>
+                <select name="input" id="input" class="form-control">
+                    <?php echo $input;?>
+                </select>
 
                 <label for="requerido">Requerido (S/N)</label>
-                <input id="requerido" value="<?= old('requerido');?>" class="form-control" type="text"
-                    name="requerido"></input>
+                <select name="requerido" id="requerido" class="form-control">
+                    <?php echo $requerido;?>
+                </select>
 
                 <div class="container mt-3">
                     <div class="row">
@@ -72,8 +75,9 @@
                 <input id="orden" value="<?= old('orden');?>" class="form-control" type="text" name="orden"></input>
 
                 <label for="activo">Activo (S/N)</label>
-                <input id="activo" value="<?= old('activo');?>" class="form-control" type="text" name="activo"></input>
-
+                <select name="activo" id="activo" class="form-control">
+                    <?php echo $activo;?>
+                </select>
             </div>
             <br />
             <a href="<?=$url_base.'opciones/0/'.$ideencryp;?>;?>" class="btn btn-outline-warning"

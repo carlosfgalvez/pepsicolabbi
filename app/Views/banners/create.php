@@ -70,8 +70,9 @@
                 <input id="orden" value="<?= old('orden');?>" class="form-control" type="text" name="orden"></input>
 
                 <label for="activo">Activo (S/N)</label>
-                <input id="activo" value="<?= old('activo');?>" class="form-control" type="text" name="activo"></input>
-
+                <select name="activo" id="activo" class="form-control">
+                    <?php echo $activo;?>
+                </select>
             </div>
             <br />
             <a href="<?=$url_base.'banners';?>" class="btn btn-outline-warning" role="button">Cancelar</a>

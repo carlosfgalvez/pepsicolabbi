@@ -74,19 +74,22 @@
                     name="fecha_fin"></input>
 
                 <label for="datos_personales">Solicitar Datos personales (S/N)</label>
-                <input id="datos_personales" value="<?= old('datos_personales');?>" class="form-control" type="text"
-                    name="datos_personales"></input>
+                <select name="datos_personales" id="datos_personales" class="form-control">
+                    <?php echo $personales;?>
+                </select>
 
                 <label for="duplicidad">Validar duplicidad (S/N)</label>
-                <input id="duplicidad" value="<?= old('duplicidad');?>" class="form-control" type="text"
-                    name="duplicidad"></input>
+                <select name="duplicidad" id="duplicidad" class="form-control">
+                    <?php echo $duplicidad;?>
+                </select>
 
                 <label for="orden">Orden</label>
                 <input id="orden" value="<?= old('orden');?>" class="form-control" type="text" name="orden"></input>
 
                 <label for="activo">Activo (S/N)</label>
-                <input id="activo" value="<?= old('activo');?>" class="form-control" type="text" name="activo"></input>
-
+                <select name="activo" id="activo" class="form-control">
+                    <?php echo $activo;?>
+                </select>
             </div>
             <br />
             <a href="<?=$url_base.'encuestas';?>" class="btn btn-outline-warning" role="button">Cancelar</a>

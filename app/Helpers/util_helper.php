@@ -83,6 +83,55 @@ function get_images_anebles($upload_dir,$nameimg=null){
   return $salida;
 }
 /* Listado de años */
+
+/* Listado si/no*/
+function list_si_no($opc){
+  $salida="";
+  $respuestas = array('S','N');
+  $salida .= '<option value="">Selecciona una opción</option>';
+
+  foreach($respuestas as $respuesta){
+    if($respuesta == 'S'){
+      $frase = 'Si';
+    }else{
+      $frase = 'No';
+    }
+    if($opc == $respuesta){
+      $salida .= '<option value="'.$respuesta.'" selected>'.$frase.'</option>';
+    }else{
+      $salida .= '<option value="'.$respuesta.'">'.$frase.'</option>';
+    }
+  }
+
+  return $salida;
+}
+
+/* Listado si/no*/
+function list_tipo_campo($opc){
+  $salida="";
+  $respuestas = array('RADIO','CHECK','INPUT','SELECT');
+  $salida .= '<option value="">Selecciona una opción</option>';
+
+  foreach($respuestas as $respuesta){
+    if($respuesta == 'RADIO'){
+      $frase = 'RADIO';
+    }elseif($respuesta == 'CHECK'){
+      $frase = 'CHECK';
+    }elseif($respuesta == 'INPUT'){
+      $frase = 'INPUT';
+    }else{
+      $frase="SELECT";
+    }
+
+    if($opc == $respuesta){
+      $salida .= '<option value="'.$respuesta.'" selected>'.$frase.'</option>';
+    }else{
+      $salida .= '<option value="'.$respuesta.'">'.$frase.'</option>';
+    }
+  }
+
+  return $salida;
+}
 function get_list_years_fecha($year=null){
   $salida = "";
 
