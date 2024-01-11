@@ -61,6 +61,9 @@ class Encuestas extends BaseController
     public function create() {
       // Obtener datos comunes a todas las vistas
       $data = $this->getData('admin');  // BaseController
+      $upload_dir = $data['upload_dir'];
+      $data['imagesopcpor'] = get_images_anebles($upload_dir,null);
+      $data['imagesopcfon'] = get_images_anebles($upload_dir,null);
 
       return view('encuestas/create',$data);
     }
@@ -76,6 +79,13 @@ class Encuestas extends BaseController
       $encuestaModel = new EncuestaModel();
       $data['reg'] = $encuestaModel->where('id',$id)->first();
       $data['view_navbar'] = view('template/navbar',$data);
+
+      $portada = $data['reg']['img_portada'];
+      $background = $data['reg']['img_fondo'];
+      
+      $upload_dir = $data['upload_dir'];
+      $data['imagesopcpor'] = get_images_anebles($upload_dir,$portada);
+      $data['imagesopcfon'] = get_images_anebles($upload_dir,$background);
 
       return view('encuestas/edit',$data);
     }

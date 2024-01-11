@@ -50,6 +50,9 @@ class Banners extends BaseController
     public function create() {
       // Obtener datos comunes a todas las vistas
       $data = $this->getData('admin');  // BaseController
+      $upload_dir = $data['upload_dir'];
+      $data['imagesopc1'] = get_images_anebles($upload_dir,null);
+      $data['imagesopc2'] = get_images_anebles($upload_dir,null);
 
       $data['view_navbar'] = view('template/navbar',$data);
       return view('banners/create',$data);
@@ -65,6 +68,13 @@ class Banners extends BaseController
       $bannerModel = new BannerModel();
       $data['reg'] = $bannerModel->where('id',$id)->first();
       $data['view_navbar'] = view('template/navbar',$data);
+
+      $img1 = $data['reg']['imagen1'];
+      $img2 = $data['reg']['imagen2'];
+      
+      $upload_dir = $data['upload_dir'];
+      $data['imagesopc1'] = get_images_anebles($upload_dir,$img1);
+      $data['imagesopc2'] = get_images_anebles($upload_dir,$img2);
       
       return view('banners/edit',$data);
     }

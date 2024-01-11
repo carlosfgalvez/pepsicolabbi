@@ -29,10 +29,19 @@
                 <input id="requerido" value="<?= $reg['requerido'];?>" class="form-control" type="text"
                     name="requerido"></input>
 
-                <label for="img_opcion">Imagen Opción</label>
-                <select name="img_opcion" id="img_opcion" class="form-control">
-                    <?php echo $imagesopc;?>
-                </select>
+                <div class="container mt-3">
+                    <div class="row">
+                        <div class="col-7 d-flex align-items-center justify-content-center">
+                            <label for="img_opcion">Imagen Opción</label>
+                            <select name="img_opcion" id="img_opcion" class="form-control">
+                                <?php echo $imagesopc;?>
+                            </select>
+                        </div>
+                        <div class="col-5 d-flex align-items-center justify-content-center">
+                            <img id="preview" src="" style="width:35%;">
+                        </div>
+                    </div>
+                </div>
 
                 <label for="img_clase">Clase Imagen</label>
                 <select name="img_clase" id="img_clase" class="form-control">
@@ -63,3 +72,16 @@
 <?=$view_footer?>
 <?=$view_avisoprivacidad?>
 <?=$view_terminosycondiciones?>
+
+<script>
+$(document).ready(function() {
+    var url = "<?=$url_base; ?>";
+    var dir = "<?=$upload_dir; ?>";
+    var image = $("#img_opcion").val();
+    change_image(url + dir, image);
+    $("#img_opcion").on("change", function(e) {
+        var image = $("#img_opcion").val();
+        change_image(url + dir, image);
+    });
+});
+</script>

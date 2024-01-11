@@ -384,3 +384,15 @@ function ocultaProcesando() {
   $("#loading-overlay").css("display", "none");
 }
 
+function change_image(dir, image) {
+  $("#preview").attr("src", dir + "/" + image);
+}
+
+function change_image_fondo(dir, image) {
+  if(image != ''){
+    $("#preview2").attr("src", dir + "/" + image);
+  }else{
+    $("#preview2").attr("src", '');
+  }
+  
+}
