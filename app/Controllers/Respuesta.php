@@ -80,7 +80,11 @@ class Respuesta extends BaseController
             if ($id!="0") { $ide= encrypt_decrypt('d',$id);} else { $ide = $id;}
 
             if (is_numeric($ide)) {
-              $result = get_enviadas_count($ide);
+              $count =0;
+              $registros = get_encuesta_descarga_count($ide,$count);
+              // $data['count_enviadas'] = $count;
+              $result = $count;
+              // $result = get_enviadas_count($ide);
               $result .= "|".get_enviadas_ultima($ide);
             }
             else {  mensaje_error(); }

@@ -48,7 +48,7 @@
         <div class="col-4"></div>
         <div class="col-2" style="text-align: right;">Total encuestas enviadas</div>
         <div class="col-2 number" style="text-align: left;"><strong><span
-                    id="count_enviadas"><?= number_format($count_enviadas);?></span></strong>
+                    id="count_enviadas"><?= $count_enviadas;?></span></strong>
             <?php if ($count_enviadas>0) { ?>
             <a class="btn btn-success btn-sm hide" style="margin-left: 20px;--bs-btn-font-size: 0.600rem!important;"
                 href="<?=$url_base;?>admin/encuestadescarga" id="btnDescargaEncuesta">Descargar</a>

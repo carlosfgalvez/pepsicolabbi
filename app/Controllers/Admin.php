@@ -23,9 +23,11 @@ class Admin extends BaseController
       // Datos
       $data['count_encuestas']          = get_encuesta_count('S');  // todas
       $data['count_encuestas_vigentes'] = get_encuesta_count('N');  // vigentes
-      $data['count_enviadas']           = get_enviadas_count(0); // enviadas todas encuestas
+      // $data['count_enviadas']           = get_enviadas_count(0); // enviadas todas encuestas
       $data['enviada_ultima']           = get_enviadas_ultima(0); // enviada última todas encuestas
-
+      $count =0;
+      $registros = get_encuesta_descarga_count(0,$count);
+      $data['count_enviadas'] = $count;
       // Listas
       $data['list_encuestas']           = get_list_encuestas(0,"(Todas las encuestas)");
       $data['view_navbar'] = view('template/navbar',$data);
@@ -60,12 +62,12 @@ class Admin extends BaseController
       $registros  = get_encuesta_descarga($ide,$count);
       $config     = get_config_bd();
 
-      $data['count_enviadas']  = get_enviadas_count($ide);
+      // $data['count_enviadas']  = get_enviadas_count($ide);
 
       $data['config']    = $config;
       $data['filename']  = $filename;
       $data['titulo']    = $titulo;
-      $data['count']     = $count;
+      $data['count_enviadas']     = $count;
       $data['hoy']       = $hoy;
       $data['registros'] = $registros;
 

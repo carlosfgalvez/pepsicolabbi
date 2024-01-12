@@ -514,7 +514,33 @@ function get_enviadas_ultima($id) {
     return $salida;
   }
 
- /* get_encuesta_descarga */
+ /* get_encuesta_descarga_count */
+ function get_encuesta_descarga_count($ide,&$count) {
+  $salida = "";
+  $count  = 0;
+  try {
+    $db = db_connect();
+    $ide  = $db->escapeString(strip_tags($ide));
+    if($ide > 0){
+      $query = "SELECT * FROM v_encuestas_enviadas
+               WHERE id_encuesta = ".$ide."
+               ORDER BY fecha, hora";
+    }else{
+      $query = "SELECT * FROM v_encuestas_enviadas
+               ORDER BY fecha, hora";
+    }
+    $registros = $db->query($query);
+    $count  = $registros->getNumRows();
+    $db->close();
+  } catch (\Exception $e) {
+    $salida = $e->getMessage();
+  }
+  return $salida;
+  //return $salida =$count."<separador>".$consulta;
+}
+
+
+  /* get_encuesta_descarga */
 function get_encuesta_descarga($ide,&$count) {
   $salida = "";
   $count  = 0;
@@ -523,9 +549,15 @@ function get_encuesta_descarga($ide,&$count) {
   try {
     $db = db_connect();
     $ide  = $db->escapeString(strip_tags($ide));
-    $query = "SELECT * FROM v_encuestas_enviadas
+    if($ide > 0){
+      $query = "SELECT * FROM v_encuestas_enviadas
                WHERE id_encuesta = ".$ide."
                ORDER BY fecha, hora";
+    }else{
+      $query = "SELECT * FROM v_encuestas_enviadas
+               ORDER BY fecha, hora";
+    }
+    
 
     $registros = $db->query($query);
     foreach ($registros->getResultArray() as $reg) {

@@ -108,3 +108,91 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
  5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-12 12:48:20 --> Undefined variable $cfg_img
+in APPPATH\Views\home\index.php on line 38.
+ 1 APPPATH\Views\home\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cfg_img', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\home\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('home/index', [], true)
+ 5 APPPATH\Controllers\Home.php(30): view('home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-12 12:51:21 --> mysqli_sql_exception: Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES) in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Admin.php(60): get_encuesta_descarga('1', 0)
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('bUdjRG5GeWxvQ1l...')
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-12 12:51:21 --> Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v_encuestas_enviadas
+               WHERE id_encuesta = 1
+               ORDER BY fecha, hora')
+ 2 APPPATH\Controllers\Admin.php(60): get_encuesta_descarga('1', 0)
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-12 13:37:31 --> number_format(): Argument #1 ($num) must be of type float, string given
+in APPPATH\Views\admin\index.php on line 51.
+ 1 APPPATH\Views\admin\index.php(51): number_format('')
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(39): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-12 13:37:34 --> Undefined variable $cfg_img
+in APPPATH\Views\home\index.php on line 38.
+ 1 APPPATH\Views\home\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cfg_img', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\home\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('home/index', [], true)
+ 5 APPPATH\Controllers\Home.php(30): view('home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-12 13:37:38 --> Undefined variable $cfg_img
+in APPPATH\Views\home\index.php on line 38.
+ 1 APPPATH\Views\home\index.php(38): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $cfg_img', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\home\\index.php', 38)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\home\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('home/index', [], true)
+ 5 APPPATH\Controllers\Home.php(30): view('home/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Home->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-12 13:37:57 --> number_format(): Argument #1 ($num) must be of type float, string given
+in APPPATH\Views\admin\index.php on line 51.
+ 1 APPPATH\Views\admin\index.php(51): number_format('')
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(39): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-01-12 13:38:39 --> number_format(): Argument #1 ($num) must be of type float, string given
+in APPPATH\Views\admin\index.php on line 51.
+ 1 APPPATH\Views\admin\index.php(51): number_format('')
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\index.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/index', [], true)
+ 5 APPPATH\Controllers\Admin.php(39): view('admin/index', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->index()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
