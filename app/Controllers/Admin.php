@@ -60,6 +60,8 @@ class Admin extends BaseController
       $registros  = get_encuesta_descarga($ide,$count);
       $config     = get_config_bd();
 
+      $data['count_enviadas']  = get_enviadas_count($ide);
+
       $data['config']    = $config;
       $data['filename']  = $filename;
       $data['titulo']    = $titulo;

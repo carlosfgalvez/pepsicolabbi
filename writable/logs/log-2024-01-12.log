@@ -1,0 +1,110 @@
+ERROR - 2024-01-12 10:25:25 --> mysqli_sql_exception: Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES) in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Admin.php(60): get_encuesta_descarga('1', 0)
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('bUdjRG5GeWxvQ1l...')
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-12 10:25:25 --> Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v_encuestas_enviadas
+               WHERE id_encuesta = 1
+               ORDER BY fecha, hora')
+ 2 APPPATH\Controllers\Admin.php(60): get_encuesta_descarga('1', 0)
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-12 10:26:52 --> mysqli_sql_exception: Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES) in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Admin.php(60): get_encuesta_descarga('1', 0)
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('bUdjRG5GeWxvQ1l...')
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-12 10:26:52 --> Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v_encuestas_enviadas
+               WHERE id_encuesta = 1
+               ORDER BY fecha, hora')
+ 2 APPPATH\Controllers\Admin.php(60): get_encuesta_descarga('1', 0)
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-12 10:32:32 --> mysqli_sql_exception: Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES) in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Admin.php(60): get_encuesta_descarga('1', 0)
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('bUdjRG5GeWxvQ1l...')
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-12 10:32:32 --> Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v_encuestas_enviadas
+               WHERE id_encuesta = 1
+               ORDER BY fecha, hora')
+ 2 APPPATH\Controllers\Admin.php(60): get_encuesta_descarga('1', 0)
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-12 10:33:12 --> mysqli_sql_exception: Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES) in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Admin.php(60): get_encuesta_descarga('1', 0)
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('bUdjRG5GeWxvQ1l...')
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-12 10:33:12 --> Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v_encuestas_enviadas
+               WHERE id_encuesta = 1
+               ORDER BY fecha, hora')
+ 2 APPPATH\Controllers\Admin.php(60): get_encuesta_descarga('1', 0)
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-01-12 10:33:30 --> mysqli_sql_exception: Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES) in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Admin.php(98): get_encuesta_descarga('1', 0)
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadas('bUdjRG5GeWxvQ1l...')
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-01-12 10:33:30 --> Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(530): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v_encuestas_enviadas
+               WHERE id_encuesta = 1
+               ORDER BY fecha, hora')
+ 2 APPPATH\Controllers\Admin.php(98): get_encuesta_descarga('1', 0)
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadas('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
