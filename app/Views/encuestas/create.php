@@ -65,13 +65,21 @@
                 <input id="color_txt" value="<?= old('color_txt');?>" class="form-control" type="text"
                     name="color_txt"></input>
 
-                <label for="fecha_inicio">Fecha Inicio (aaaa-mm-dd hh:mi:se)</label>
-                <input id="fecha_inicio" value="<?= old('fecha_inicio');?>" class="form-control" type="text"
-                    name="fecha_inicio"></input>
-
-                <label for="fecha_fin">Fecha Fin (aaaa-mm-dd hh:mi:se)</label>
-                <input id="fecha_fin" value="<?= old('fecha_fin');?>" class="form-control" type="text"
-                    name="fecha_fin"></input>
+                <!--  -->
+                <div class="container mt-3 mb-3">
+                    <div class="row">
+                        <div class="col-6 d-flex align-items-center justify-content-center">
+                            <label for="fecha_inicio">Fecha Inicio (aaaa-mm-dd hh:mi:se)</label>
+                            <input id="fecha_inicio" value="<?= old('fecha_inicio');?>" class="form-control"
+                                type="datetime-local" name="fecha_inicio"></input>
+                        </div>
+                        <div class="col-6 d-flex align-items-center justify-content-center">
+                            <label for="fecha_fin">Fecha Fin (aaaa-mm-dd hh:mi:se)</label>
+                            <input id="fecha_fin" value="<?= old('fecha_fin');?>" class="form-control"
+                                type="datetime-local" name="fecha_fin"></input>
+                        </div>
+                    </div>
+                </div>
 
                 <label for="datos_personales">Solicitar Datos personales (S/N)</label>
                 <select name="datos_personales" id="datos_personales" class="form-control">
