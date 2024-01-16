@@ -15,24 +15,24 @@
                     name="id_encuesta"></input>
 
                 <label for="pregunta">Pregunta</label>
-                <input id="pregunta" value="<?= $reg['pregunta'];?>" class="form-control" type="text"
+                <input id="pregunta" value="<?= $reg['pregunta'];?>" class="form-control mb-3" type="text"
                     name="pregunta"></input>
 
-                <label for="tipo">Tipo (RADIO,CHECK,INPUT,SELECT)</label>
-                <select name="tipo" id="tipo" class="form-control">
+                <label for="tipo">Tipo</label>
+                <select name="tipo" id="tipo" class="form-control mb-3">
                     <?php echo $tipos;?>
                 </select>
 
-                <label for="requerido">Requerido (S/N)</label>
-                <select name="requerido" id="requerido" class="form-control">
+                <label for="requerido">Requerido</label>
+                <select name="requerido" id="requerido" class="form-control mb-3">
                     <?php echo $requerido;?>
                 </select>
 
                 <label for="orden">Orden</label>
-                <input id="orden" value="<?= $reg['orden'];?>" class="form-control" type="text" name="orden"></input>
+                <input id="orden" value="<?= $reg['orden'];?>" class="form-control mb-3" type="text" name="orden"></input>
 
-                <label for="activo">Activo (S/N)</label>
-                <select name="activo" id="activo" class="form-control">
+                <label for="activo">Activo</label>
+                <select name="activo" id="activo" class="form-control mb-3">
                     <?php echo $activo;?>
                 </select>
 

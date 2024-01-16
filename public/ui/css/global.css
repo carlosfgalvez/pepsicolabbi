@@ -36,6 +36,7 @@ header {
 .card {
   border-radius: 30px;
   border: 2px solid var(--primary-blue);
+  margin: 5%;
 }
 
 .card-title,

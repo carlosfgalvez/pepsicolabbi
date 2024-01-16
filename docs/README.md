@@ -30,6 +30,8 @@ PROD: https://labbi.com.mx
 #### Creación tablas de la BD
 6.Ejecutar script: mysql -h [host] -u [user] -p[pass] -D [base de datps] < bd/script_structure_create.sql
 
+6.2 Ejecutar script: mysql -h [host] -u [user] -p[pass] -D [base de datps] < bd/script_structure_create_v3.sql
+
 #### Creación funcion de la BD
 7.1.Ejecutar script: mysql -h [host] -u [user] -p[pass] -D [base de datps] < bd/script_function_drop.sql
 
@@ -48,6 +50,8 @@ PROD: https://labbi.com.mx
 9.3 Ejecutar script: mysql -h [host] -u [user] -p[pass] -D [base de datps] < bd/script_data_pregunta12.sql
 
 9.4 Ejecutar script: mysql -h [host] -u [user] -p[pass] -D [base de datps] < bd/script_data_pregunta_7y12.sql
+
+9.5 Ejecutar script: mysql -h [host] -u [user] -p[pass] -D [base de datps] < bd/script_data_nuevapregunta5.sql
 
 
 #### ARCHIVIVOS DE CONFIG

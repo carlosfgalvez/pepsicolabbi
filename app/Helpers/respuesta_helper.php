@@ -524,10 +524,10 @@ function get_enviadas_ultima($id) {
     if($ide > 0){
       $query = "SELECT * FROM v_encuestas_enviadas
                WHERE id_encuesta = ".$ide."
-               ORDER BY fecha, hora";
+               ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'), hora";
     }else{
       $query = "SELECT * FROM v_encuestas_enviadas
-               ORDER BY fecha, hora";
+               ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'), hora";
     }
     $registros = $db->query($query);
     $count  = $registros->getNumRows();
@@ -552,12 +552,12 @@ function get_encuesta_descarga($ide,&$count) {
     if($ide > 0){
       $query = "SELECT * FROM v_encuestas_enviadas
                WHERE id_encuesta = ".$ide."
-               ORDER BY fecha, hora";
+               ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'), hora";
     }else{
       $query = "SELECT * FROM v_encuestas_enviadas
-               ORDER BY fecha, hora";
+               ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'), hora";
     }
-    
+
 
     $registros = $db->query($query);
     foreach ($registros->getResultArray() as $reg) {

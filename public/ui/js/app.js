@@ -385,14 +385,19 @@ function ocultaProcesando() {
 }
 
 function change_image(dir, image) {
-  $("#preview").attr("src", dir + "/" + image);
+  if (image!="") {
+    $("#preview").attr("src", dir + "/" + image);
+    $("#preview").css("display", "block");
+  } else  {
+    $("#preview").css("display", "none");
+  }
 }
 
 function change_image_fondo(dir, image) {
   if(image != ''){
     $("#preview2").attr("src", dir + "/" + image);
+    $("#preview2").css("display", "block");
   }else{
-    $("#preview2").attr("src", '');
+    $("#preview2").css("display", "none");
   }
-  
 }

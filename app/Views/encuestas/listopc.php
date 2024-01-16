@@ -5,8 +5,8 @@
 
     <div class="text-center">
         <h3 class="text-center mt-5">Encuestas - Opciones <span class="number"> <?=$count;?></span></h3>
-        <select class="" id="list_encuestas"><?=$list_encuestas;?></select><br>
-        <select class="" id="list_preguntas"><?=$list_preguntas;?></select>
+        <select class="mb-3" id="list_encuestas"><?=$list_encuestas;?></select><br>
+        <select class="mb-3" id="list_preguntas"><?=$list_preguntas;?></select>
         <div class="text-right" style="text-align: right!important;">
             <a href="<?=$url_base.'opciones/createopc/'.$idp.'/'.$ideencryp;?>" class="btn btn-success btn-sm hide"
                 role="button" id="btnNuevo">Nuevo</a>
@@ -38,7 +38,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($registros as $reg): 
+                    <?php foreach($registros as $reg):
                     $imgclass = '';
                     $imgname = '';
                     if($reg['img_opcion'] != ''){

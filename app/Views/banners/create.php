@@ -21,56 +21,56 @@
         <?php endif ?>
 
         <form method="post" action="<?=site_url('banners/save')?>" enctype="multipart/form-data">
-            <div class="form-group">
+            <div class="form-group left color-gray font-admin">
                 <label for="tipo">Tipo (HOME)</label>
-                <input id="tipo" value="<?= old('tipo');?>" class="form-control" type="text" name="tipo"></input>
+                <input id="tipo" value="<?= old('tipo');?>" class="form-control mb-3" type="text" name="tipo"></input>
 
                 <label for="nombre">Nombre</label>
-                <input id="nombre" value="<?= old('nombre');?>" class="form-control" type="text" name="nombre"></input>
+                <input id="nombre" value="<?= old('nombre');?>" class="form-control mb-3" type="text" name="nombre"></input>
 
                 <label for="descripcion">Descripción</label>
-                <input id="descripcion" value="<?= old('descripcion');?>" class="form-control" type="text"
+                <input id="descripcion" value="<?= old('descripcion');?>" class="form-control mb-3" type="text"
                     name="descripcion"></input>
 
-                <div class="container mt-3">
+                <div class="mt-3">
                     <div class="row">
                         <div class="col-7 d-flex align-items-center justify-content-center">
                             <label for="imagen1">Imagen 1</label>
-                            <select name="imagen1" id="imagen1" class="form-control">
+                            <select name="imagen1" id="imagen1" class="form-control mb-3">
                                 <?php echo $imagesopc1;?>
                             </select>
                         </div>
                         <div class="col-5 d-flex align-items-center justify-content-center">
-                            <img id="preview" src="" style="width:35%;">
+                            <img id="preview" src="" style="max-width:155px;">
                         </div>
                     </div>
                 </div>
 
-                <div class="container mt-3">
+                <div class="mt-3">
                     <div class="row">
                         <div class="col-7 d-flex align-items-center justify-content-center">
                             <label for="imagen2">Imagen 2</label>
-                            <select name="imagen2" id="imagen2" class="form-control">
+                            <select name="imagen2" id="imagen2" class="form-control mb-3">
                                 <?php echo $imagesopc2;?>
                             </select>
                         </div>
                         <div class="col-5 d-flex align-items-center justify-content-center">
-                            <img id="preview2" src="" style="width:35%;">
+                            <img id="preview2" src="" style="max-width:155px;">
                         </div>
                     </div>
                 </div>
 
                 <label for="url1">Url 1</label>
-                <input id="url1" value="<?= old('url1');?>" class="form-control" type="text" name="url1"></input>
+                <input id="url1" value="<?= old('url1');?>" class="form-control mb-3" type="text" name="url1"></input>
 
                 <label for="url2">Url 2</label>
-                <input id="url2" value="<?= old('url2');?>" class="form-control" type="text" name="url2"></input>
+                <input id="url2" value="<?= old('url2');?>" class="form-control mb-3" type="text" name="url2"></input>
 
                 <label for="orden">Orden</label>
-                <input id="orden" value="<?= old('orden');?>" class="form-control" type="text" name="orden"></input>
+                <input id="orden" value="<?= old('orden');?>" class="form-control mb-3" type="text" name="orden"></input>
 
                 <label for="activo">Activo (S/N)</label>
-                <select name="activo" id="activo" class="form-control">
+                <select name="activo" id="activo" class="form-control mb-3">
                     <?php echo $activo;?>
                 </select>
             </div>

@@ -20,47 +20,47 @@
                     name="id_pregunta"></input>
 
                 <label for="opcion">Opción</label>
-                <input id="opcion" value="<?= $reg['opcion'];?>" class="form-control" type="text" name="opcion"></input>
+                <input id="opcion" value="<?= $reg['opcion'];?>" class="form-control mb-3" type="text" name="opcion"></input>
 
-                <label for="input">Input (S/N)</label>
-                <select name="input" id="input" class="form-control">
+                <label for="input">Input</label>
+                <select name="input" id="input" class="form-control mb-3">
                     <?php echo $input;?>
                 </select>
 
-                <label for="requerido">Requerido (S/N)</label>
-                <select name="requerido" id="requerido" class="form-control">
+                <label for="requerido">Requerido</label>
+                <select name="requerido" id="requerido" class="form-control mb-3">
                     <?php echo $requerido;?>
                 </select>
 
-                <div class="container mt-3">
+                <div class="mt-3">
                     <div class="row">
                         <div class="col-7 d-flex align-items-center justify-content-center">
                             <label for="img_opcion">Imagen Opción</label>
-                            <select name="img_opcion" id="img_opcion" class="form-control">
+                            <select name="img_opcion" id="img_opcion" class="form-control mb-3">
                                 <?php echo $imagesopc;?>
                             </select>
                         </div>
                         <div class="col-5 d-flex align-items-center justify-content-center">
-                            <img id="preview" src="" style="width:35%;">
+                            <img id="preview" src="" style="max-width:155px;">
                         </div>
                     </div>
                 </div>
 
                 <label for="img_clase">Clase Imagen</label>
-                <select name="img_clase" id="img_clase" class="form-control">
+                <select name="img_clase" id="img_clase" class="form-control mb-3">
                     <?php echo $clases ;?>
                 </select>
 
                 <label for="img_alto">Imagen Alto (Pixeles)</label>
-                <input id="img_alto" value="<?= $reg['img_alto'];?>" class="form-control" type="text"
+                <input id="img_alto" value="<?= $reg['img_alto'];?>" class="form-control mb-3" type="text"
                     name="img_alto"></input>
 
                 <label for="img_ancho">Imagen Ancho (Pixeles)</label>
-                <input id="img_ancho" value="<?= $reg['img_ancho'];?>" class="form-control" type="text"
+                <input id="img_ancho" value="<?= $reg['img_ancho'];?>" class="form-control mb-3" type="text"
                     name="img_ancho"></input>
 
-                <label for="activo">Activo (S/N)</label>
-                <select name="activo" id="activo" class="form-control">
+                <label for="activo">Activo</label>
+                <select name="activo" id="activo" class="form-control mb-3">
                     <?php echo $activo;?>
                 </select>
             </div>
