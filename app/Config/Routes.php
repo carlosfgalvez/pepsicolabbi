@@ -23,8 +23,8 @@ $routes->get('login','Home::login');
 
 /* admin perfil */
 $routes->get('admin','Admin::index');
-$routes->get('admin/encuestadescarga/(:any)','Admin::encuestadescarga/$1');
-$routes->get('admin/verenviadas/(:any)','Admin::VerEncuestasEnviadas/$1');
+$routes->get('admin/encuestadescarga/(:any)','Admin::encuestadescarga/$1/$2/$3');
+$routes->get('admin/verenviadas/(:any)','Admin::VerEncuestasEnviadas/$1/$2/$3');
 $routes->get('admin/logdescarga','Admin::logdescarga');
 
 /* tabla settings */

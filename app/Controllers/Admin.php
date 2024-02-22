@@ -41,11 +41,12 @@ class Admin extends BaseController
   }
 
   /* encuesta descarga */
-  public function encuestadescarga($idencrypt=null) {
+  public function encuestadescarga($idencrypt=null,$year=null,$month=null) {
     $ide= encrypt_decrypt('d',$idencrypt);
     // Obtener datos comunes a todas las vistas
     $data = $this->getData('admin');  // BaseController
-
+    if ($year==null) {$year = date("Y");}
+    if ($month==null) {$month = date("m");}
     // Validar la sessión
     if (validDataSession($token,$rol)) {
       // get encuesta
@@ -59,7 +60,7 @@ class Admin extends BaseController
       $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
       $titulo     = $enc['nombre'];
       $count      = 0;
-      $registros  = get_encuesta_descarga($ide,$count);
+      $registros  = get_encuesta_descarga($ide,$count,$year,$month);
       $config     = get_config_bd();
 
       // $data['count_enviadas']  = get_enviadas_count($ide);
@@ -67,9 +68,11 @@ class Admin extends BaseController
       $data['config']    = $config;
       $data['filename']  = $filename;
       $data['titulo']    = $titulo;
-      $data['count_enviadas']     = $count;
-      $data['hoy']       = $hoy;
-      $data['registros'] = $registros;
+      $data['count_enviadas'] = $count;
+      $data['hoy']        = $hoy;
+      $data['registros']  = $registros;
+      $data['year']       = $year;
+      $data['month']      = $month;
 
       $data['view_navbar'] = view('template/navbar',$data);
       $view = "admin/descargaencuesta";
@@ -81,11 +84,12 @@ class Admin extends BaseController
 }
 
 /* ver registros de encuestas enviadas */
-public function VerEncuestasEnviadas($idencrypt=null) {
+public function VerEncuestasEnviadas($idencrypt=null,$year=null,$month=null) {
   $ide= encrypt_decrypt('d',$idencrypt);
   // Obtener datos comunes a todas las vistas
   $data = $this->getData('admin');  // BaseController
-
+  if ($year==null) {$year = date("Y");}
+  if ($month==null) {$month = date("m");}
   // Validar la sessión
   if (validDataSession($token,$rol)) {
     // get encuesta
@@ -99,16 +103,20 @@ public function VerEncuestasEnviadas($idencrypt=null) {
     $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
     $titulo     = $enc['nombre'];
     $count      = 0;
-    $registros  = get_encuesta_descarga($ide,$count);
+    $registros  = get_encuesta_descarga($ide,$count,$year,$month);
     $config     = get_config_bd();
 
-    $data['config']    = $config;
-    $data['filename']  = $filename;
-    $data['titulo']    = $titulo;
-    $data['count']     = $count;
-    $data['hoy']       = $hoy;
-    $data['registros'] = $registros;
-    $data['id_encuesta'] = $idencrypt;
+    $data['config']     = $config;
+    $data['filename']   = $filename;
+    $data['titulo']     = $titulo;
+    $data['count']      = $count;
+    $data['hoy']        = $hoy;
+    $data['registros']  = $registros;
+    $data['id_encuesta']= $idencrypt;
+    $data['year']       = $year;
+    $data['month']      = $month;
+    $data['list_year']  = get_list_years_fecha($year);
+    $data['list_month'] = get_list_meses_fecha($month);
 
     $data['view_navbar'] = view('template/navbar',$data);
     $view = "admin/verEncuestasEnviadas";

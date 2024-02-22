@@ -149,6 +149,16 @@
             <th class="sinborde"></th>
             <th class="titulo2" colspan="6"><?=$titulo; ?></th>
         </tr>
+				<tr class="sinborde">
+						<th class="sinborde"></th>
+						<th class="sinborde"></th>
+						<th class="titulo2" colspan="6"><?=$year; ?></th>
+				</tr>
+				<tr class="sinborde">
+						<th class="sinborde"></th>
+						<th class="sinborde"></th>
+						<th class="titulo2" colspan="6"><?=$month; ?></th>
+				</tr>
         <tr class="sinborde">
             <th class="sinborde"></th>
             <th class="sinborde"></th>

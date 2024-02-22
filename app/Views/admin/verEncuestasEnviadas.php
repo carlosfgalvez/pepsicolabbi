@@ -9,6 +9,8 @@
         <p>
         <h5>Total <?=$count ?></h5>
         </p>
+        <select class="mb-3" id="list_year"><?=$list_year;?></select><br>
+        <select class="mb-3" id="list_month"><?=$list_month;?></select>
     </div>
     <br />
     <div class="center mt-3"
@@ -75,10 +77,37 @@
 
     <div class="center mt-3">
         <a href="<?=$url_base;?>admin" class="btn btn-outline-secondary btn-sm" role="button">Regresar</a>
-        <a class="btn btn-success" href="<?=$url_base;?>admin/encuestadescarga/<?=$id_encuesta;?>"
+        <a class="btn btn-success" href="<?=$url_base;?>admin/encuestadescarga/<?=$id_encuesta;?>/<?=$year;?>/<?=$month;?>"
             id="btnDescargaEncuesta">Descargar Excel</a>
     </div>
 
-    </body>
+</main>
 
-    </html>
+<?=$view_footer?>
+<?=$view_avisoprivacidad?>
+<?=$view_terminosycondiciones?>
+
+<script type="application/javascript">
+$(document).ready(function() {
+   console.log('Ver encuestas...');
+   var url = "<?=$url_base; ?>";
+   var ide = "<?=$id_encuesta;?>";
+
+    $('#list_year').on('change', function(e) {
+        var year = $('#list_year').val();
+
+        if (year != "") {
+            window.location = url + 'admin/verenviadas/' + ide+'/'+year;
+        }
+    });
+
+    $('#list_month').on('change', function(e) {
+        var year  = $('#list_year').val();
+        var month = $('#list_month').val();
+
+        if (year != "" && month != "") {
+            window.location = url + 'admin/verenviadas/' + ide+'/'+year+'/'+month;
+        }
+    });
+  });
+  </script>

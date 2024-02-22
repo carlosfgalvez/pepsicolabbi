@@ -435,6 +435,7 @@ function get_enviadas_count($id=0) {
 function get_enviadas_ultima($id) {
   $result   = "";
 
+  if ($id>0) {
   try {
     $enviadaModel = new EnviadaModel();
     if ($id>0) {
@@ -452,6 +453,7 @@ function get_enviadas_ultima($id) {
 
   } catch (\Exception $e) {
     $result="";
+  }
   }
   return $result;
 }
@@ -518,22 +520,27 @@ function get_enviadas_ultima($id) {
  function get_encuesta_descarga_count($ide,&$count) {
   $salida = "";
   $count  = 0;
-  try {
-    $db = db_connect();
-    $ide  = $db->escapeString(strip_tags($ide));
-    if($ide > 0){
-      $query = "SELECT * FROM v_encuestas_enviadas
-               WHERE id_encuesta = ".$ide."
-               ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'), hora";
-    }else{
-      $query = "SELECT * FROM v_encuestas_enviadas
-               ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'), hora";
+
+  if($ide > 0){
+    try {
+      $db = db_connect();
+      $ide  = $db->escapeString(strip_tags($ide));
+      if($ide > 0){
+        $query = "SELECT 'x' total FROM v_encuestas_enviadas WHERE id_encuesta = ".$ide;
+      }else{
+        $query = "SELECT 'x' total FROM v_encuestas_enviadas";
+      }
+      $registros = $db->query($query);
+      /*
+      foreach ($registros->getResultArray() as $reg) {
+        $count = $reg["total"];
+      }
+      */
+      $count  = $registros->getNumRows();
+      $db->close();
+    } catch (\Exception $e) {
+      $salida = $e->getMessage();
     }
-    $registros = $db->query($query);
-    $count  = $registros->getNumRows();
-    $db->close();
-  } catch (\Exception $e) {
-    $salida = $e->getMessage();
   }
   return $salida;
   //return $salida =$count."<separador>".$consulta;
@@ -541,7 +548,7 @@ function get_enviadas_ultima($id) {
 
 
   /* get_encuesta_descarga */
-function get_encuesta_descarga($ide,&$count) {
+function get_encuesta_descarga($ide,&$count,$year,$month) {
   $salida = "";
   $count  = 0;
   $nombre = "";
@@ -552,12 +559,13 @@ function get_encuesta_descarga($ide,&$count) {
     if($ide > 0){
       $query = "SELECT * FROM v_encuestas_enviadas
                WHERE id_encuesta = ".$ide."
+               AND DATE_FORMAT(STR_TO_DATE(fecha,'%d/%m/%Y'),'%m/%Y') ='".$month."/".$year."'
                ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'), hora";
     }else{
       $query = "SELECT * FROM v_encuestas_enviadas
+                WHERE DATE_FORMAT(STR_TO_DATE(fecha,'%d/%m/%Y'),'%m/%Y') ='".$month."/".$year."'
                ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'), hora";
     }
-
 
     $registros = $db->query($query);
     foreach ($registros->getResultArray() as $reg) {
