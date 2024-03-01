@@ -152,12 +152,7 @@
 				<tr class="sinborde">
 						<th class="sinborde"></th>
 						<th class="sinborde"></th>
-						<th class="titulo2" colspan="6"><?=$year; ?></th>
-				</tr>
-				<tr class="sinborde">
-						<th class="sinborde"></th>
-						<th class="sinborde"></th>
-						<th class="titulo2" colspan="6"><?=$month; ?></th>
+						<th class="titulo2" colspan="6">Periodo Consultado: <?=$year; ?> a <?=$month; ?></th>
 				</tr>
         <tr class="sinborde">
             <th class="sinborde"></th>
@@ -167,7 +162,7 @@
         <tr class="sinborde">
             <th class="sinborde"></th>
             <th class="sinborde"></th>
-            <th class="sinborde" colspan="6">Fecha <?=$hoy ?></th>
+            <th class="sinborde" colspan="6">Fecha de Consulta <?=$hoy ?></th>
         </tr>
     </table>
     <br />

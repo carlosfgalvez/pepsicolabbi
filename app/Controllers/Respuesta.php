@@ -91,6 +91,15 @@ class Respuesta extends BaseController
    	        break;
       case 101:  /*  get registros */
    		     break;
+      case 102:  /* get_encuesta_filtradas  */
+              $id  = strip_tags($this->request->getVar('ide'));
+              $inicio  = strip_tags($this->request->getVar('inicio'));
+              $fin  = strip_tags($this->request->getVar('fin'));
+              $ide= encrypt_decrypt('d',$id);
+                $count =0;
+                $registros = get_encuestas_filtradas($ide,$count,$inicio,$fin);
+              return $registros;
+          break;
       default:
             //$result = "Parámetro incorrecto: ".$acc);
             //break;

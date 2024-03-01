@@ -7,16 +7,16 @@
         <?php foreach($banners as $reg): ?>
         <div>
             <p>
-              <span class="fs-3 mt-5"><?=$reg['nombre'];?></span>
+                <span class="fs-3 mt-5"><?=$reg['nombre'];?></span>
             </p>
             <?php if ($reg['url1']!='') { ?>
-              <a class="" href="<?=$url_base;?>/<?=$reg['url1'];?>">
-                <img src="<?=$url_base;?><?=$upload_dir;?>/<?=$reg['imagen1'];?>"
-                  class="d-inline-block align-top" style="border-radius: 5px;width: 250px" alt="">
-              </a>
+            <a class="" href="<?=$url_base;?>/<?=$reg['url1'];?>">
+                <img src="<?=$url_base;?><?=$upload_dir;?>/<?=$reg['imagen1'];?>" class="d-inline-block align-top"
+                    style="border-radius: 5px;width: 250px" alt="">
+            </a>
             <?php } else { ?>
-              <img src="<?=$url_base;?><?=$upload_dir;?>/<?=$reg['imagen1'];?>"
-                class="d-inline-block align-top" style="border-radius: 5px;width: 250px" alt="">
+            <img src="<?=$url_base;?><?=$upload_dir;?>/<?=$reg['imagen1'];?>" class="d-inline-block align-top"
+                style="border-radius: 5px;width: 250px" alt="">
             <?php } ?>
             <p><?=$reg['descripcion'];?></p>
         </div>
@@ -26,18 +26,18 @@
 
     <!-- LABBI -->
     <div class="row">
-      <div class="col-6">
-        <div class="fs-3 pt-5">
-            <center><?=$cfg_titulo?></center>
+        <div class="col-6">
+            <div class="fs-3 pt-5">
+                <center><?=$cfg_titulo?></center>
+            </div>
+            <p class="left">
+                <?=$cfg_descripcion?>
+            </p>
         </div>
-        <p class="left">
-            <?=$cfg_descripcion?>
-        </p>
-      </div>
-      <div class="col-6">
-        <img src="<?=$url_base;?><?=$upload_dir;?>/<?=$cfg_img;?>" width="200"
-            class="d-inline-block align-top" style="border-radius: 5px;" alt="">
-      </div>
+        <div class="col-6">
+            <img src="<?=$url_base;?><?=$upload_dir;?>/<?=$cfg_img;?>" width="200" class="d-inline-block align-top"
+                style="border-radius: 5px;" alt="">
+        </div>
     </div>
 
     <!-- ENCUESTAS -->
@@ -45,19 +45,19 @@
         <center>¿Haz probado alguno? ¡Queremos escucharte!</center>
     </div>
     <div class="row" style="padding: 50px;">
-    <?php foreach($encuestas as $reg): ?>
+        <?php foreach($encuestas as $reg): ?>
 
         <div class="col-3" style="text-align: center;">
             <img src="<?=$url_base;?><?=$upload_dir;?>/<?=$reg['img_portada'];?>" width="100"
                 class="d-inline-block align-top" style="border-radius: 5px;" alt="" title="<?=$reg['descripcion']?>">
             <br><span><?=$reg['nombre']?></span>
             <?php if ($reg['vigente']=='S') { ?>
-              <br><a class="btn btn-primary btn-sm" href="<?=$url_base;?>encuesta/<?=$reg['url'];?>">Ir a la encuesta</a>
+            <br><a class="btn btn-primary btn-sm" href="<?=$url_base;?>encuesta/<?=$reg['url'];?>">Ir a la encuesta</a>
             <?php } else { ?>
-              <br><span class="alerta">Encuesta ya no se encuentra vigente</span>
+            <br><span class="alerta">Encuesta ya no se encuentra vigente</span>
             <?php } ?>
         </div>
-    <?php endforeach; ?>
+        <?php endforeach; ?>
     </div>
 
     <!-- FORMULARIO DE CONTACTO -->
@@ -65,9 +65,9 @@
         <div class="fs-3" id="msg"></div>
     </main>
     <main class="px-3 pb-5 mb-5 container toggle-quit" id="datospersonales">
-      <div class="fs-3 pt-5 mb-5">
-          <center>¿Te gustaría probar nuestra innovaciones?</center>
-      </div>
+        <div class="fs-3 pt-5 mb-5">
+            <center>¿Te gustaría probar nuestra innovaciones?</center>
+        </div>
         <div class="row">
             <div class="col-12 col-md-6 text-start mb-4">
                 <div class="text-red">Dejanos tus datos y podrías ser seleccionado para ser de los primeros en probar lo

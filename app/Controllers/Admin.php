@@ -60,17 +60,19 @@ class Admin extends BaseController
       $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
       $titulo     = $enc['nombre'];
       $count      = 0;
-      $registros  = get_encuesta_descarga($ide,$count,$year,$month);
+      $registros  = get_encuestas_filtradas($ide,$count,$year,$month);
       $config     = get_config_bd();
+
+      $resultados_filtrados = explode("<separador>", $registros);
 
       // $data['count_enviadas']  = get_enviadas_count($ide);
 
       $data['config']    = $config;
       $data['filename']  = $filename;
       $data['titulo']    = $titulo;
-      $data['count_enviadas'] = $count;
+      $data['count_enviadas'] = $resultados_filtrados[0];
       $data['hoy']        = $hoy;
-      $data['registros']  = $registros;
+      $data['registros']  = $resultados_filtrados[1];
       $data['year']       = $year;
       $data['month']      = $month;
 
@@ -120,6 +122,49 @@ public function VerEncuestasEnviadas($idencrypt=null,$year=null,$month=null) {
 
     $data['view_navbar'] = view('template/navbar',$data);
     $view = "admin/verEncuestasEnviadas";
+  } else {
+    $view = "home/login";
+  }
+
+  return view($view,$data);
+}
+
+/* ver registros de encuestas enviadas */
+public function VerEncuestasEnviadasFiltra() {
+  // $ide= encrypt_decrypt('d',$idencrypt);
+  $data = $this->getData('admin');  // BaseController
+ 
+  // Validar la sessión
+  if (validDataSession($token,$rol)) {
+    // get encuesta
+    // $enc  = get_encuesta($ide);
+
+    // Obtener datos del usuario
+    // $id  = $data['id'];
+    //$data['reg'] = get_registro_admin($id);
+
+    $hoy 	      = date("d-m-Y H:i:s");
+    // $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
+    // $titulo     = $enc['nombre'];
+    $count      = 0;
+    // $registros  = get_encuesta_descarga($ide,$count,$year,$month);
+    // $config     = get_config_bd();
+
+    // $data['config']     = $config;
+    // $data['filename']   = $filename;
+    $data['titulo']     = 'Selecciona el rango de fechas a consultar';//$titulo;
+    $data['count']      = $count;
+    $data['list_encuestas']           = get_list_encuestas(0,"(Todas las encuestas)");
+    // $data['hoy']        = $hoy;
+    // $data['registros']  = $registros;
+    // $data['id_encuesta']= $idencrypt;
+    // $data['year']       = $year;
+    // $data['month']      = $month;}
+    // $data['list_year']  = get_list_years_fecha($year);
+    // $data['list_month'] = get_list_meses_fecha($month);
+
+    $data['view_navbar'] = view('template/navbar',$data);
+    $view = "admin/verEncuestasEnviadasFiltra";
   } else {
     $view = "home/login";
   }

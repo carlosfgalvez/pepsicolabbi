@@ -547,11 +547,13 @@ function get_enviadas_ultima($id) {
 }
 
 
-  /* get_encuesta_descarga */
+  /* get_encuesta_descarga  */
 function get_encuesta_descarga($ide,&$count,$year,$month) {
+  // $idenc = encrypt_decrypt('e',$ide);
   $salida = "";
   $count  = 0;
   $nombre = "";
+
 
   try {
     $db = db_connect();
@@ -628,7 +630,90 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
     $salida = $e->getMessage();
   }
   return $salida;
-  //return $salida =$count."<separador>".$consulta;
+  // return $salida =$count."<separador>".$consulta;
+}
+
+ /* get_encuesta_descarga  */
+ function get_encuestas_filtradas($ide,&$count,$year,$month) {
+  // $idenc = encrypt_decrypt('e',$ide);
+  $salida = "";
+  $count  = 0;
+  $nombre = "";
+  $inicio = date_format(date_create($year),"d/m/Y");
+  $fin = date_format(date_create($month),"d/m/Y");
+
+  try {
+    $db = db_connect();
+    // $ide  = $db->escapeString(strip_tags($ide));
+    if($ide > 0){
+      $query ="SELECT * FROM v_encuestas_enviadas 
+               WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."' 
+               ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y')";
+    }
+
+    $registros = $db->query($query);
+    foreach ($registros->getResultArray() as $reg) {
+            $salida  .= "<tr>
+                          <td style='text-align: center;'>".$reg["fecha"]."</td>
+                          <td style='text-align: center;'>".$reg["hora"]."</td>
+                          <td style='text-align: left;'>".$reg["nombre"]."</td>
+                          <td style='text-align: left;'>".$reg["correo"]."</td>
+                          <td style='text-align: left;'>".$reg["telefono"]."</td>
+                          <td style='text-align: center;'>".$reg["ip"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_1"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_1"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_2"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_2"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_3"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_3"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_4"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_4"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_5"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_5"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_6"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_6"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_7"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_7"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_8"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_8"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_9"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_9"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_10"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_10"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_11"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_11"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_12"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_12"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_13"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_13"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_14"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_14"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_15"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_15"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_16"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_16"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_17"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_17"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_18"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_18"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_19"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_19"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_20"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_20"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_21"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_21"]."</td>
+                          <td style='text-align: left;'>".$reg["Pregunta_22"]."</td>
+                          <td style='text-align: left;'>".$reg["Respuesta_22"]."</td>
+                      </tr>";
+    }
+    $count  = $registros->getNumRows();
+    $db->close();
+  } catch (\Exception $e) {
+    $salida = $e->getMessage();
+  }
+  // echo $count."<separador>".$salida;
+  // return $salida;
+  return $count."<separador>".$salida;
 }
 
  /* get_logs_descarga */

@@ -50,9 +50,6 @@
         <div class="col-2 number" style="text-align: left;"><strong><span
                     id="count_enviadas"><?= $count_enviadas;?></span></strong>
 
-            <a class="btn btn-success btn-sm hide" style="margin-left: 20px;--bs-btn-font-size: 0.600rem!important;"
-                href="<?=$url_base;?>admin/encuestadescarga" id="btnDescargaEncuesta">Descargar</a>
-
         </div>
         <div class="col-4"></div>
     </div>
@@ -71,9 +68,9 @@
             <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>encuestas/1">Configurar Encuesta</a>
             <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>preguntas/1">Configurar Preguntas</a>
             <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>opciones/1">Configurar Opciones</a>
-            <a class="btn btn-primary hide" id="btnVerEnviadas" style="margin: 5px;"
-                href="<?=$url_base;?>admin/verenviadas">Encuestas Enviadas
-            </a>            
+            <a class="btn btn-primary" id="btnVerEnviadas" style="margin: 5px;"
+                href="<?=$url_base;?>admin/verenviadasfiltro">Encuestas Enviadas
+            </a>
             <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>contactos ">Contactos</a>
             <a class="btn btn-outline-success" style="margin: 5px;" href="<?=$url_base;?>upload">Subir Archivos</a>
             <!--<a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>enviadas">Ver Enviadas</a>-->

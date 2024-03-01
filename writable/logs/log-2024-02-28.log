@@ -1,0 +1,439 @@
+CRITICAL - 2024-02-28 12:14:27 --> Undefined variable $idencrypt
+in APPPATH\Controllers\Admin.php on line 157.
+ 1 APPPATH\Controllers\Admin.php(157): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idencrypt', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Admin.php', 157)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:15:27 --> Undefined variable $data
+in APPPATH\Controllers\Admin.php on line 163.
+ 1 APPPATH\Controllers\Admin.php(163): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Admin.php', 163)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:17:04 --> Undefined variable $titulo
+in APPPATH\Views\admin\verEncuestasEnviadasFiltra.php on line 7.
+ 1 APPPATH\Views\admin\verEncuestasEnviadasFiltra.php(7): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $titulo', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\verEncuestasEnviadasFiltra.php', 7)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\verEncuestasEnviadasFiltra.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra', [], true)
+ 5 APPPATH\Controllers\Admin.php(169): view('admin/verEncuestasEnviadasFiltra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:17:57 --> Undefined variable $id_encuesta
+in APPPATH\Views\admin\verEncuestasEnviadasFiltra.php on line 93.
+ 1 APPPATH\Views\admin\verEncuestasEnviadasFiltra.php(93): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_encuesta', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\verEncuestasEnviadasFiltra.php', 93)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\verEncuestasEnviadasFiltra.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra', [], true)
+ 5 APPPATH\Controllers\Admin.php(169): view('admin/verEncuestasEnviadasFiltra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:21:42 --> Undefined variable $id_encuesta
+in APPPATH\Views\admin\verEncuestasEnviadasFiltra.php on line 105.
+ 1 APPPATH\Views\admin\verEncuestasEnviadasFiltra.php(105): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $id_encuesta', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\verEncuestasEnviadasFiltra.php', 105)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\verEncuestasEnviadasFiltra.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra', [], true)
+ 5 APPPATH\Controllers\Admin.php(169): view('admin/verEncuestasEnviadasFiltra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 12:41:40 --> Undefined variable $count
+in APPPATH\Views\admin\verEncuestasEnviadasFiltra.php on line 10.
+ 1 APPPATH\Views\admin\verEncuestasEnviadasFiltra.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $count', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\verEncuestasEnviadasFiltra.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\verEncuestasEnviadasFiltra.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra', [], true)
+ 5 APPPATH\Controllers\Admin.php(169): view('admin/verEncuestasEnviadasFiltra', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra()
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 13:39:54 --> syntax error, unexpected token ";"
+in APPPATH\Views\admin\verEncuestasEnviadasFiltra.php on line 110.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra', [], true)
+ 3 APPPATH\Controllers\Admin.php(169): view('admin/verEncuestasEnviadasFiltra', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 13:40:51 --> syntax error, unexpected token ";"
+in APPPATH\Views\admin\verEncuestasEnviadasFiltra.php on line 110.
+ 1 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra', [], true)
+ 3 APPPATH\Controllers\Admin.php(169): view('admin/verEncuestasEnviadasFiltra', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 21:16:01 --> syntax error, unexpected token "&", expecting ")"
+in APPPATH\Controllers\Respuesta.php on line 102.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Respuesta')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Respuesta')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Respuesta', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 21:20:22 --> syntax error, unexpected token "&", expecting ")"
+in APPPATH\Controllers\Respuesta.php on line 102.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Respuesta')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Respuesta')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Respuesta', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 21:23:01 --> syntax error, unexpected token "&", expecting ")"
+in APPPATH\Controllers\Respuesta.php on line 104.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Respuesta')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Respuesta')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Respuesta', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 21:42:34 --> syntax error, unexpected token "&", expecting ")"
+in APPPATH\Controllers\Respuesta.php on line 102.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Respuesta')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Respuesta')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Respuesta', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 21:43:28 --> syntax error, unexpected token "break"
+in APPPATH\Controllers\Respuesta.php on line 107.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Respuesta')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Respuesta')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Respuesta', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:03:53 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 102.
+ 1 APPPATH\Controllers\Respuesta.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 102)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:41 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:46 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:47 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:47 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:47 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:48 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:48 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:48 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:48 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:48 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:48 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:49 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:49 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:49 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:49 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:49 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:50 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:50 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:50 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:50 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:50 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:50 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:51 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:51 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:51 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:51 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:51 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:51 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:11:52 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 103.
+ 1 APPPATH\Controllers\Respuesta.php(103): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 103)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:21:41 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 102.
+ 1 APPPATH\Controllers\Respuesta.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 102)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:22:51 --> Undefined variable $ide
+in APPPATH\Controllers\Respuesta.php on line 102.
+ 1 APPPATH\Controllers\Respuesta.php(102): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $ide', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Respuesta.php', 102)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:31:43 --> Undefined variable $idenc
+in APPPATH\Helpers\respuesta_helper.php on line 553.
+ 1 APPPATH\Helpers\respuesta_helper.php(553): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idenc', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 553)
+ 2 APPPATH\Controllers\Respuesta.php(102): get_encuesta_descarga('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', 0, '2024-02-28', '2024-02-28')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:36:52 --> Undefined variable $idenc
+in APPPATH\Helpers\respuesta_helper.php on line 553.
+ 1 APPPATH\Helpers\respuesta_helper.php(553): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idenc', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 553)
+ 2 APPPATH\Controllers\Respuesta.php(102): get_encuesta_descarga('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', 0, '2024-02-28', '2024-02-28')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 17:36:55 --> Undefined variable $idenc
+in APPPATH\Helpers\respuesta_helper.php on line 553.
+ 1 APPPATH\Helpers\respuesta_helper.php(553): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idenc', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 553)
+ 2 APPPATH\Controllers\Respuesta.php(102): get_encuesta_descarga('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', 0, '2024-02-28', '2024-02-28')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-28 17:52:59 --> mysqli_sql_exception: Unknown column 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09' in 'where clause' in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(575): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Respuesta.php(102): get_encuesta_descarga('bUdjRG5GeWxvQ1l...', 0, '2024-02-28', '2024-02-28')
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-02-28 17:52:59 --> Unknown column 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(575): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v_encuestas_enviadas
+                WHERE id_encuesta = bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09
+                AND DATE_FORMAT(STR_TO_DATE(fecha,\'%d/%m/%Y\'),\'%m/%Y\') BETWEEN \'2024-02-28\' AND \'2024-02-28\'
+                ORDER BY STR_TO_DATE(fecha,\'%d/%m/%Y\')')
+ 2 APPPATH\Controllers\Respuesta.php(102): get_encuesta_descarga('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', 0, '2024-02-28', '2024-02-28')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-28 18:07:45 --> mysqli_sql_exception: Unknown column 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09' in 'where clause' in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(578): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Respuesta.php(102): get_encuesta_descarga('bUdjRG5GeWxvQ1l...', 0, '2024-02-28', '2024-02-28')
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-02-28 18:07:45 --> Unknown column 'bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(578): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v_encuestas_enviadas
+                WHERE id_encuesta = bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09
+                AND DATE_FORMAT(STR_TO_DATE(fecha,\'%d/%m/%Y\'),\'%m/%Y\') BETWEEN \'2024-02-28\' AND \'2024-02-28\'
+                ORDER BY STR_TO_DATE(fecha,\'%d/%m/%Y\')')
+ 2 APPPATH\Controllers\Respuesta.php(102): get_encuesta_descarga('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', 0, '2024-02-28', '2024-02-28')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 22:33:33 --> Undefined variable $idenc
+in APPPATH\Helpers\respuesta_helper.php on line 553.
+ 1 APPPATH\Helpers\respuesta_helper.php(553): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idenc', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 553)
+ 2 APPPATH\Controllers\Respuesta.php(103): get_encuesta_descarga('1', 0, '2024-02-28', '2024-02-28')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 22:33:39 --> Undefined variable $idenc
+in APPPATH\Helpers\respuesta_helper.php on line 553.
+ 1 APPPATH\Helpers\respuesta_helper.php(553): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idenc', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 553)
+ 2 APPPATH\Controllers\Respuesta.php(103): get_encuesta_descarga('1', 0, '2024-02-28', '2024-02-28')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-28 22:33:41 --> Undefined variable $idenc
+in APPPATH\Helpers\respuesta_helper.php on line 553.
+ 1 APPPATH\Helpers\respuesta_helper.php(553): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $idenc', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 553)
+ 2 APPPATH\Controllers\Respuesta.php(103): get_encuesta_descarga('1', 0, '2024-02-28', '2024-02-28')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

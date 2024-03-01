@@ -316,11 +316,11 @@ function logout(url) {
 /*********************************************************/
 /************************ admin  *************************/
 /*********************************************************/
-
 // get_encuesta_count
 function get_encuesta_count(ide, url) {
   var dataString = "&acc=100&ide=" + ide;
   console.log("get_encuesta_count: " + dataString);
+  muestraProcesando();
   var count = 0;
   var query = "";
   var urldescarga = url + "admin/encuestadescarga/" + ide;
@@ -331,35 +331,65 @@ function get_encuesta_count(ide, url) {
     url: url + "respuesta",
     data: dataString,
     success: function (data) {
+      ocultaProcesando();
       console.log(data);
       var count = data.split("|")[0];
       var fecha = data.split("|")[1];
       if (data != "" && count > 0) {
         $("#count_enviadas").text(count);
         $("#ultima_enviada").text(fecha);
-        if (ide != "0") {
-          $("#btnDescargaEncuesta").attr("href", urldescarga);
-          $("#btnDescargaEncuesta").removeClass("hide");
-          $("#btnVerEnviadas").attr("href", urlvista);
-          $("#btnVerEnviadas").removeClass("hide");
-        } else {
-          $("#btnDescargaEncuesta").attr("href", "");
-          $("#btnDescargaEncuesta").addClass("hide");
-          $("#btnVerEnviadas").attr("href", "");
-          $("#btnVerEnviadas").addClass("hide");
-        }
+        // if (ide != "0") {
+        //   // $("#btnDescargaEncuesta").attr("href", urldescarga);
+        //   // $("#btnDescargaEncuesta").removeClass("hide");
+        //   // $("#btnVerEnviadas").attr("href", urlvista);
+        //   // $("#btnVerEnviadas").removeClass("hide");
+        // } else {
+        //   $("#btnDescargaEncuesta").attr("href", "");
+        //   $("#btnDescargaEncuesta").addClass("hide");
+        //   // $("#btnVerEnviadas").attr("href", "");
+        //   // $("#btnVerEnviadas").addClass("hide");
+        // }
       } else {
         $("#count_enviadas").text(0);
         $("#ultima_enviada").text("");
-        $("#btnDescargaEncuesta").attr("href", "");
-        $("#btnDescargaEncuesta").addClass("hide");
-        $("#btnVerEnviadas").attr("href", "");
-        $("#btnVerEnviadas").addClass("hide");
       }
     },
   });
   return count;
 }
+
+// filtrar encuestas
+function filtrarEncuestas(ide, inicio, fin, url) {
+  var dataString = "&acc=102&ide=" + ide + "&inicio=" + inicio + "&fin=" + fin;
+  muestraProcesando();
+  $.ajax({
+    type: "POST",
+    url: url + "respuesta",
+    data: dataString,
+    success: function (data) {
+      var count = data.split("<separador>")[0];
+      var registros = data.split("<separador>")[1];
+      if (count > 0) {
+        $("#listRegistros").html("");
+        $("#listRegistros").html(registros);
+        $("#count").text('');
+        $("#count").text('Total: '+count);
+        var btnExcel = "<a class='btn btn-success' href='"+url+"admin/encuestadescarga/"+ide+"/"+inicio+"/"+fin+"' id='btnDescargaEncuesta'>Descargar Excel</a>";
+        $("#descarga").html(btnExcel);
+        ocultaProcesando();
+      }else{
+        $("#count").text('');
+        $("#listRegistros").html("");
+        $("#count").text('No hay resultados');
+        ocultaProcesando();
+      }
+    },
+  });
+  // return count;
+}
+
+//////////////////////////////////////////////////////////////////////
+
 
 /*********************************************************/
 /********************* utilities  ************************/
