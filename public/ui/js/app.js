@@ -361,14 +361,17 @@ function get_encuesta_count(ide, url) {
 // filtrar encuestas
 function filtrarEncuestas(ide, inicio, fin, url) {
   var dataString = "&acc=102&ide=" + ide + "&inicio=" + inicio + "&fin=" + fin;
+  console.log(dataString);
   muestraProcesando();
   $.ajax({
     type: "POST",
     url: url + "respuesta",
     data: dataString,
     success: function (data) {
+      // console.log(data);
       var count = data.split("<separador>")[0];
       var registros = data.split("<separador>")[1];
+      var tiempo = data.split("<separador>")[2];
       if (count > 0) {
         $("#listRegistros").html("");
         $("#listRegistros").html(registros);
@@ -383,6 +386,7 @@ function filtrarEncuestas(ide, inicio, fin, url) {
         $("#count").text('No hay resultados');
         ocultaProcesando();
       }
+      console.log(tiempo);
     },
   });
   // return count;

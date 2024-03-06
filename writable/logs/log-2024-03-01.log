@@ -1,0 +1,70 @@
+ERROR - 2024-03-01 10:56:34 --> mysqli_sql_exception: Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES) in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * FROM v...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM v...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM v...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(654): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', 0, '2024-03-01', '2024-03-01')
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-01 10:56:34 --> Access denied for user 'gamer65_pepsico'@'187.191.39.144' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(654): CodeIgniter\Database\BaseConnection->query('SELECT * FROM v_encuestas_enviadas 
+               WHERE id_encuesta = 1 AND fecha BETWEEN \'01/03/2024\' AND \'01/03/2024\' 
+               ORDER BY STR_TO_DATE(fecha,\'%d/%m/%Y\')')
+ 2 APPPATH\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', 0, '2024-03-01', '2024-03-01')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-01 11:34:06 --> Error connecting to the database: mysqli_sql_exception: Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:185
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(185): mysqli->real_connect('gamer64.com', 'gamer65_pepsico', 'GZ2leflMmM@J', 'gamer65_pepsico...', 3306, '', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\config_helper.php(10): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\BaseController.php(81): get_config_bd()
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Admin.php(15): App\Controllers\BaseController->getData('admin')
+#9 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Admin->index()
+#10 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#11 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:229
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\system\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\config_helper.php(10): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\BaseController.php(81): get_config_bd()
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Admin.php(15): App\Controllers\BaseController->getData('admin')
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Admin->index()
+#9 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#10 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2024-03-01 11:34:06 --> Unable to connect to the database.
+Main connection [MySQLi]: Se produjo un error durante el intento de conexión ya que la parte conectada no respondió adecuadamente tras un periodo de tiempo, o bien se produjo un error en la conexión establecida ya que el host conectado no ha podido responder
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1615): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `settings`
+WHERE `tipo` = :tipo:', [...], false)
+ 3 SYSTEMPATH\Model.php(237): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(624): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Helpers\config_helper.php(10): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\BaseController.php(81): get_config_bd()
+ 7 APPPATH\Controllers\Admin.php(15): App\Controllers\BaseController->getData('admin')
+ 8 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->index()
+ 9 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

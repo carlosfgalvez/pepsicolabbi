@@ -1,0 +1,68 @@
+CRITICAL - 2024-03-06 11:15:12 --> mysqli_fetch_assoc(): Argument #1 ($result) must be of type mysqli_result, CodeIgniter\Database\MySQLi\Result given
+in APPPATH\Helpers\respuesta_helper.php on line 668.
+ 1 APPPATH\Helpers\respuesta_helper.php(668): mysqli_fetch_assoc(Object(CodeIgniter\Database\MySQLi\Result))
+ 2 APPPATH\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', 0, '2024-03-02', '2024-03-02')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 11:24:57 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Helpers\respuesta_helper.php on line 668.
+ 1 APPPATH\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', 0, '2024-03-02', '2024-03-02')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 13:54:59 --> Undefined variable $aux
+in APPPATH\Helpers\respuesta_helper.php on line 798.
+ 1 APPPATH\Helpers\respuesta_helper.php(798): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aux', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 798)
+ 2 APPPATH\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', 0, '2024-03-29', '2024-03-29')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 13:58:34 --> Undefined variable $aux
+in APPPATH\Helpers\respuesta_helper.php on line 798.
+ 1 APPPATH\Helpers\respuesta_helper.php(798): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aux', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 798)
+ 2 APPPATH\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', 10404, '2024-02-29', '2024-02-29')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 14:16:47 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::first()
+in APPPATH\Helpers\respuesta_helper.php on line 652.
+ 1 APPPATH\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', 0, '2024-02-29', '2024-02-29')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 14:17:48 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::first()
+in APPPATH\Helpers\respuesta_helper.php on line 652.
+ 1 APPPATH\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', 0, '2024-02-29', '2024-02-29')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 14:18:29 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::first()
+in APPPATH\Helpers\respuesta_helper.php on line 652.
+ 1 APPPATH\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', 0, '2024-02-29', '2024-02-29')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 14:25:53 --> Undefined variable $aux
+in APPPATH\Helpers\respuesta_helper.php on line 800.
+ 1 APPPATH\Helpers\respuesta_helper.php(800): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aux', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 800)
+ 2 APPPATH\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', '10404', '2024-02-29', '2024-02-29')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-06 14:26:26 --> Undefined variable $aux
+in APPPATH\Helpers\respuesta_helper.php on line 800.
+ 1 APPPATH\Helpers\respuesta_helper.php(800): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $aux', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 800)
+ 2 APPPATH\Controllers\Respuesta.php(100): get_encuestas_filtradas('1', '10404', '2024-02-29', '2024-02-29')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
