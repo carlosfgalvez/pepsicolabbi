@@ -634,7 +634,7 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
 }
 
  /* get_encuesta_descarga  */
- function get_encuestas_filtradas($ide,&$count,$year,$month) {
+ function get_encuestas_filtradas($ide,&$count,$year,$month,$opc) {
   $start_time = microtime(true);  
   // $idenc = encrypt_decrypt('e',$ide);
   $salida = "";
@@ -655,6 +655,13 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
     }
    
     $count = $total;
+
+    if($opc == 1){
+      $stop = $total;
+    }else{
+      $stop = 0;
+    }
+    
 
     if($total > 0){
     
@@ -721,7 +728,7 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
       }
       $total = $total - 500;
       $index += 500;   
-      } while ($total > 0);
+      } while ($total > $stop);
   }
                
     // if($ide > 0){

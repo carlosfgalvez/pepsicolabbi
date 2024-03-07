@@ -95,9 +95,11 @@ class Respuesta extends BaseController
               $id  = strip_tags($this->request->getVar('ide'));
               $inicio  = strip_tags($this->request->getVar('inicio'));
               $fin  = strip_tags($this->request->getVar('fin'));
+              $opc  = strip_tags($this->request->getVar('opc'));
+
               $ide= encrypt_decrypt('d',$id);
                 $count =0;
-                $registros = get_encuestas_filtradas($ide,$count,$inicio,$fin);
+                $registros = get_encuestas_filtradas($ide,$count,$inicio,$fin,$opc);
               return $registros;
           break;
       default:

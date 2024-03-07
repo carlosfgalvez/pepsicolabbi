@@ -360,7 +360,7 @@ function get_encuesta_count(ide, url) {
 
 // filtrar encuestas
 function filtrarEncuestas(ide, inicio, fin, url) {
-  var dataString = "&acc=102&ide=" + ide + "&inicio=" + inicio + "&fin=" + fin;
+  var dataString = "&acc=102&ide=" + ide + "&inicio=" + inicio + "&fin=" + fin + "&opc=" + 1;
   console.log(dataString);
   muestraProcesando();
   $.ajax({
@@ -377,7 +377,7 @@ function filtrarEncuestas(ide, inicio, fin, url) {
         $("#listRegistros").html(registros);
         $("#count").text('');
         $("#count").text('Total: '+count);
-        var btnExcel = "<a class='btn btn-success' href='"+url+"admin/encuestadescarga/"+ide+"/"+inicio+"/"+fin+"' id='btnDescargaEncuesta'>Descargar Excel</a>";
+        var btnExcel = "<a class='btn btn-success' href='"+url+"admin/encuestadescarga/"+ide+"/"+inicio+"/"+fin+"/0' id='btnDescargaEncuesta'>Descargar Excel</a>";
         $("#descarga").html(btnExcel);
         ocultaProcesando();
       }else{
