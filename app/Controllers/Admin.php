@@ -41,7 +41,7 @@ class Admin extends BaseController
   }
 
   /* encuesta descarga */
-  public function encuestadescarga($idencrypt=null,$year=null,$month=null) {
+  public function encuestadescarga($idencrypt=null,$year=null,$month=null, $opc=null) {
     $ide= encrypt_decrypt('d',$idencrypt);
     // Obtener datos comunes a todas las vistas
     $data = $this->getData('admin');  // BaseController
@@ -60,7 +60,7 @@ class Admin extends BaseController
       $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
       $titulo     = $enc['nombre'];
       $count      = 0;
-      $registros  = get_encuestas_filtradas($ide,$count,$year,$month);
+      $registros  = get_encuestas_filtradas($ide,$count,$year,$month, $opc);
       $config     = get_config_bd();
 
       $resultados_filtrados = explode("<separador>", $registros);
