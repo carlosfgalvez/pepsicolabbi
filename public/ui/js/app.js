@@ -368,7 +368,6 @@ function filtrarEncuestas(ide, inicio, fin, url) {
     url: url + "respuesta",
     data: dataString,
     success: function (data) {
-      words = data.split(',');
       // console.log(data);
       var count = data.split("<separador>")[0];
       var registros = data.split("<separador>")[1];
@@ -409,23 +408,27 @@ function filtrarEncuestas2(ide, inicio, fin, url) {
       var tiempo = data.split("<separador>")[2];
       var head = data.split("<separador>")[3];
 
+      words = registros.split('<separa>');
+
+
       if (count > 0) {
         $("#headTable").html("");
         $("#headTable").html(head);
         $("#listRegistros").html("");
-        $("#listRegistros").html(registros);
+        // $("#listRegistros").html(registros);
         $("#count").text('');
         $("#count").text('Total: '+count);
         var btnExcel = "<a class='btn btn-success' href='"+url+"admin/encuestadescarga2/"+ide+"/"+inicio+"/"+fin+"/0' id='btnDescargaEncuesta'>Descargar Excel</a>";
         $("#descarga").html(btnExcel);
         ocultaProcesando();
       }else{
+        $("#headTable").html("");
         $("#count").text('');
         $("#listRegistros").html("");
         $("#count").text('No hay resultados');
         ocultaProcesando();
       }
-      console.log(tiempo);
+      console.log(words.length);
     },
   });
 }

@@ -728,8 +728,6 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
                               <td style='text-align: left;'>".$reg["Pregunta_22"]."</td>
                               <td style='text-align: left;'>".$reg["Respuesta_22"]."</td>
                           </tr>";
-
-      array_push($rows_array, $row);
       // print_r($stack);
       }
       $total = $total - 500;
@@ -889,6 +887,19 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
                             }
                           }
                           $salida .= "</tr>";
+                      //     $salida .= "<tr>
+                      //     <td style='text-align: center;'>".$reg["fecha"]."</td>
+                      //     <td style='text-align: center;'>".$reg["hora"]."</td>
+                      //     <td style='text-align: left;'>".$reg["nombre"]."</td>
+                      //     <td style='text-align: left;'>".$reg["correo"]."</td>
+                      //     <td style='text-align: left;'>".$reg["telefono"]."</td>
+                      //     <td style='text-align: center;'>".$reg["ip"]."</td>";
+                      // for($i=1; $i <= 22; $i++) {
+                      //   if($i < 18){
+                      //     $salida .= "<td style='text-align: left;'>". $reg['Respuesta_'.$i.'']."</td>";
+                      //   }
+                      // }
+                      // $salida .= "</tr><separa>";
       }
       $total = $total - 500;
       $index += 500;   
