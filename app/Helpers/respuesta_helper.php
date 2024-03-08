@@ -635,12 +635,12 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
 
  /* get_encuesta_descarga  */
  function get_encuestas_filtradas($ide,&$count,$year,$month,$opc) {
-  $start_time = microtime(true);  
+  $start_time = microtime(true);
   // $idenc = encrypt_decrypt('e',$ide);
   $salida = "";
   $count  = 0;
   $nombre = "";
-  $index = 1;
+  $index = 0;
   $inicio = date_format(date_create($year),"d/m/Y");
   $fin = date_format(date_create($month),"d/m/Y");
 
@@ -649,14 +649,14 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
 
   try {
     $db = db_connect();
-    $queryTotal ="SELECT COUNT(*) total FROM v_encuestas_enviadas 
+    $queryTotal ="SELECT COUNT(*) total FROM v_encuestas_enviadas
                WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'";
-    
+
     $result = $db->query($queryTotal);
     foreach ($result->getResultArray() as $reg) {
       $total = $reg['total'];
     }
-   
+
     $count = $total;
 
     if($opc == 1){
@@ -664,16 +664,16 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
     }else{
       $stop = 0;
     }
-    
+
 
     if($total > 0){
-    
-      do {  
-      $query = "SELECT * FROM v_encuestas_enviadas 
-      WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."' 
-      ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'),hora
-      Limit $index, 500";
-  
+
+      do {
+      $query = "SELECT * FROM v_encuestas_enviadas
+      WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'
+      ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'),hora";
+     // Limit $index, 500";
+
       $registros = $db->query($query);
       foreach ($registros->getResultArray() as $reg) {
           $salida .= "<tr>
@@ -731,17 +731,18 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
       // print_r($stack);
       }
       $total = $total - 500;
-      $index += 500;   
-      } while ($total > 0);
-  }
-               
+      $index += 500;
+
+      } while ($total >0);
+
+
     // if($ide > 0){
-    //   $query ="SELECT * FROM v_encuestas_enviadas 
-    //            WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."' 
+    //   $query ="SELECT * FROM v_encuestas_enviadas
+    //            WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'
     //            ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'),hora";
     // }
 
-  
+
     // $registros = $db->query($query);
     // foreach ($registros->getResultArray() as $reg) {
     //         $salida  .= "<tr>
@@ -809,7 +810,7 @@ $minutos = floor(($end_time - ($horas * 3600)) / 60);
 $segundos = $end_time - ($horas * 3600) - ($minutos * 60);
 
 $tiempo = 'Registros consultados: '.$count.' en el tiempo '. $horas . ':' . $minutos . ":" . $segundos;
-  
+
 // return $rows_array;
 return $count."<separador>".$salida."<separador>".$tiempo;
 }
@@ -817,7 +818,7 @@ return $count."<separador>".$salida."<separador>".$tiempo;
 //----------------------------------------------------------------------------------------------------
 
 function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
-  $start_time = microtime(true);  
+  $start_time = microtime(true);
   $salida = "";
   $headTable = "";
   $preguntas ="";
@@ -829,14 +830,14 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
 
   try {
     $db = db_connect();
-    $queryTotal ="SELECT COUNT(*) total FROM v_encuestas_enviadas 
+    $queryTotal ="SELECT COUNT(*) total FROM v_encuestas_enviadas
                WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'";
-    
+
     $result = $db->query($queryTotal);
     foreach ($result->getResultArray() as $reg) {
       $total = $reg['total'];
     }
-   
+
     $count = $total;
 
     if($opc == 1){
@@ -844,13 +845,13 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
     }else{
       $stop = 0;
     }
-    
+
 
     if($total > 0){
-    
-      do {  
-      $query = "SELECT * FROM v_encuestas_enviadas 
-      WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."' 
+
+      do {
+      $query = "SELECT * FROM v_encuestas_enviadas
+      WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'
       ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'),hora
       Limit $index, 500";
 
@@ -872,7 +873,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
         }
       }
 
-  
+
       foreach ($registros->getResultArray() as $reg) {
           $salida .= "<tr>
                               <td style='text-align: center;'>".$reg["fecha"]."</td>
@@ -902,7 +903,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
                       // $salida .= "</tr><separa>";
       }
       $total = $total - 500;
-      $index += 500;   
+      $index += 500;
       } while ($total > 0);
   }
     $db->close();
