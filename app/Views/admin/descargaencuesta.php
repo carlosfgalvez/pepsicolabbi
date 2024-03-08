@@ -220,9 +220,7 @@
             <th style='padding: 5px; color: white; background-color: #28458E'>Respuesta 22</th>
         </tr>
         <tbody>
-            <?php foreach ($registros as $key => $row) {
-                echo $row;
-            } //if (isset($registros)) { echo $registros; }; ?>
+            <?php if (isset($registros)) { echo $registros; }; ?>
         </tbody>
     </table>
 

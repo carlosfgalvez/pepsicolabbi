@@ -734,7 +734,7 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
       $index += 500;
 
       } while ($total >0);
-
+ }
 
     // if($ide > 0){
     //   $query ="SELECT * FROM v_encuestas_enviadas
