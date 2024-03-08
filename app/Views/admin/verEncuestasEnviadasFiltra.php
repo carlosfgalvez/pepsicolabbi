@@ -21,21 +21,25 @@
             <div class="col-4 text-center"></div>
         </div>
         <div class="row">
-            <div class="col-6 d-flex align-items-center justify-content-center">
-                <label for="fecha_inicio">Fecha Inicio</label>
+            <div class="col-4"></div>
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <label for="fecha_inicio">Desde </label>
                 <input id="fecha_inicio" value="<?= old('fecha_inicio');?>" class="form-control mb-3" type="date"
                     name="fecha_inicio"></input>
             </div>
-            <div class="col-6 d-flex align-items-center justify-content-center">
-                <label for="fecha_fin">Fecha Fin</label>
+            <div class="col-2 d-flex align-items-center justify-content-center">
+                <label for="fecha_fin">Hasta </label>
                 <input id="fecha_fin" value="<?= old('fecha_fin');?>" class="form-control mb-3" type="date"
                     name="fecha_fin"></input>
             </div>
+            <div class="col-4"></div>
         </div>
         <div class="row">
-            <div class="col-4 text-center"><a href="<?=$url_base;?>admin" class="btn btn-secondary" role="button">Regresar</a></div>
-            <div class="col-4 text-center"><a class="btn btn-success" href="#" id="btnConsultar">Consultar</a></div>
-            <div class="col-4 text-center" id="descarga"></div>
+            <div class="col-4"></div>
+            <div class="col-1 text-center"><a href="<?=$url_base;?>admin" class="btn btn-secondary" role="button">Regresar</a></div>
+            <div class="col-1 text-center"><a class="btn btn-success" href="#" id="btnConsultar">Consultar</a></div>
+            <div class="col-2 text-center" id="descarga"></div>
+            <div class="col-4"></div>
         </div>
     </div>
     <br />
@@ -96,7 +100,7 @@
                 <th style='padding: 5px; color: white; background-color: #28458E'>Respuesta 22</th>
             </tr>
             <tbody id="listRegistros">
-                
+
             </tbody>
         </table>
     </div>
