@@ -822,6 +822,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
   $salida = "";
   $headTable = "";
   $preguntas ="";
+  $num_respuestas = 0;
   $count  = 0;
   $nombre = "";
   $index = 0;
@@ -869,6 +870,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
       ";
       for($i=1; $i <= 22; $i++) {
         if($data[0]['Pregunta_'.$i] != ''){
+          $num_respuestas++;
           $headTable .= "<th style='padding: 5px; color: white; background-color: #28458E'>". $data[0]['Pregunta_'.$i.'']."</th>";
         }
       }
@@ -883,7 +885,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
                               <td style='text-align: left;'>".$reg["telefono"]."</td>
                               <td style='text-align: center;'>".$reg["ip"]."</td>";
                           for($i=1; $i <= 22; $i++) {
-                            if($i < 18){
+                            if($i < $num_respuestas){
                               $salida .= "<td style='text-align: left;'>". $reg['Respuesta_'.$i.'']."</td>";
                             }
                           }
