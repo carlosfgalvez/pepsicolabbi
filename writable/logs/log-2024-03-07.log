@@ -1,0 +1,312 @@
+CRITICAL - 2024-03-07 13:43:47 --> Array to string conversion
+in APPPATH\Helpers\respuesta_helper.php on line 818.
+ 1 APPPATH\Helpers\respuesta_helper.php(818): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 818)
+ 2 APPPATH\Controllers\Respuesta.php(102): get_encuestas_filtradas('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 13:47:05 --> Array to string conversion
+in APPPATH\Helpers\respuesta_helper.php on line 818.
+ 1 APPPATH\Helpers\respuesta_helper.php(818): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 818)
+ 2 APPPATH\Controllers\Respuesta.php(102): get_encuestas_filtradas('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:20:10 --> Invalid file: "admin/verEncuestasEnviadasFiltra2.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/verEncuestasEnviadasFiltra2.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra2', [], true)
+ 3 APPPATH\Controllers\Admin.php(193): view('admin/verEncuestasEnviadasFiltra2', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra2()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:21:35 --> Invalid file: "admin/verEncuestasEnviadasFiltra2.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/verEncuestasEnviadasFiltra2.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra2', [], true)
+ 3 APPPATH\Controllers\Admin.php(193): view('admin/verEncuestasEnviadasFiltra2', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra2()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:22:46 --> Invalid file: "admin/verEncuestasEnviadasFiltra2.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/verEncuestasEnviadasFiltra2.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra2', [], true)
+ 3 APPPATH\Controllers\Admin.php(193): view('admin/verEncuestasEnviadasFiltra2', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra2()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 17:22:55 --> Invalid file: "admin/verEncuestasEnviadasFiltra2.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/verEncuestasEnviadasFiltra2.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra2', [], true)
+ 3 APPPATH\Controllers\Admin.php(193): view('admin/verEncuestasEnviadasFiltra2', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra2()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 18:00:44 --> Invalid file: "admin/verEncuestasEnviadasFiltra2.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/verEncuestasEnviadasFiltra2.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra2', [], true)
+ 3 APPPATH\Controllers\Admin.php(193): view('admin/verEncuestasEnviadasFiltra2', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra2()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 18:01:13 --> Invalid file: "admin/verEncuestasEnviadasFiltra2.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 39.
+ 1 SYSTEMPATH\View\View.php(214): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/verEncuestasEnviadasFiltra2.php')
+ 2 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/verEncuestasEnviadasFiltra2', [], true)
+ 3 APPPATH\Controllers\Admin.php(193): view('admin/verEncuestasEnviadasFiltra2', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->VerEncuestasEnviadasFiltra2()
+ 5 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 18:08:13 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Helpers\respuesta_helper.php on line 867.
+ 1 APPPATH\Controllers\Respuesta.php(113): get_encuestas_filtradas2('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 18:08:42 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Helpers\respuesta_helper.php on line 867.
+ 1 APPPATH\Controllers\Respuesta.php(113): get_encuestas_filtradas2('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 18:17:38 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Helpers\respuesta_helper.php on line 867.
+ 1 APPPATH\Controllers\Respuesta.php(113): get_encuestas_filtradas2('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 18:24:05 --> Cannot use object of type CodeIgniter\Database\MySQLi\Result as array
+in APPPATH\Helpers\respuesta_helper.php on line 941.
+ 1 APPPATH\Controllers\Respuesta.php(113): get_encuestas_filtradas2('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 18:26:33 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::first()
+in APPPATH\Helpers\respuesta_helper.php on line 870.
+ 1 APPPATH\Controllers\Respuesta.php(113): get_encuestas_filtradas2('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 18:26:50 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+in APPPATH\Helpers\respuesta_helper.php on line 870.
+ 1 APPPATH\Controllers\Respuesta.php(113): get_encuestas_filtradas2('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 19:06:59 --> explode(): Argument #2 ($string) must be of type string, array given
+in APPPATH\Helpers\respuesta_helper.php on line 860.
+ 1 APPPATH\Helpers\respuesta_helper.php(860): explode('', [...])
+ 2 APPPATH\Controllers\Respuesta.php(113): get_encuestas_filtradas2('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 19:07:05 --> explode(): Argument #2 ($string) must be of type string, array given
+in APPPATH\Helpers\respuesta_helper.php on line 860.
+ 1 APPPATH\Helpers\respuesta_helper.php(860): explode('', [...])
+ 2 APPPATH\Controllers\Respuesta.php(113): get_encuestas_filtradas2('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 19:07:25 --> explode(): Argument #2 ($string) must be of type string, array given
+in APPPATH\Helpers\respuesta_helper.php on line 860.
+ 1 APPPATH\Helpers\respuesta_helper.php(860): explode('', [...])
+ 2 APPPATH\Controllers\Respuesta.php(113): get_encuestas_filtradas2('1', '5618', '2024-03-02', '2024-03-02', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:33:37 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-29', '2024-02-29', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:33:44 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-29', '2024-02-29', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:33:55 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-29', '2024-02-29', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:34:31 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-29', '2024-02-29', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:35:37 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-29', '2024-02-29', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:38:55 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-03-02', '2024-03-02', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:39:00 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-03-02', '2024-03-02', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:39:09 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-03-02', '2024-03-02', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:39:43 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-03-02', '2024-03-02', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:40:48 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-03-02', '2024-03-02', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:43:21 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-03-02', '2024-03-02', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:43:26 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-03-02', '2024-03-02', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:44:01 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-26', '2024-03-26', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:44:04 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-26', '2024-03-26', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:44:10 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-26', '2024-03-26', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-07 21:44:41 --> foreach() argument must be of type array|object, string given
+in APPPATH\Views\admin\descargaencuesta2.php on line 174.
+ 1 APPPATH\Views\admin\descargaencuesta2.php(174): CodeIgniter\Debug\Exceptions->errorHandler(2, 'foreach() argument must be of type array|object, string given', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php', 174)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\descargaencuesta2.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/descargaencuesta2', [], true)
+ 5 APPPATH\Controllers\Admin.php(134): view('admin/descargaencuesta2', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga2('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-26', '2024-03-26', '0', '', '', '')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
