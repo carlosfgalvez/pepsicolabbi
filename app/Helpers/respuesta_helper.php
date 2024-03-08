@@ -728,7 +728,7 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
       }
       $total = $total - 500;
       $index += 500;   
-      } while ($total > $stop);
+      } while ($total >0);
   }
                
     // if($ide > 0){
