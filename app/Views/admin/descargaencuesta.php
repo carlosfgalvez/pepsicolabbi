@@ -149,11 +149,11 @@
             <th class="sinborde"></th>
             <th class="titulo2" colspan="6"><?=$titulo; ?></th>
         </tr>
-				<tr class="sinborde">
-						<th class="sinborde"></th>
-						<th class="sinborde"></th>
-						<th class="titulo2" colspan="6">Periodo Consultado: <?=$year; ?> a <?=$month; ?></th>
-				</tr>
+        <tr class="sinborde">
+            <th class="sinborde"></th>
+            <th class="sinborde"></th>
+            <th class="titulo2" colspan="6">Periodo Consultado: <?=$year; ?> a <?=$month; ?></th>
+        </tr>
         <tr class="sinborde">
             <th class="sinborde"></th>
             <th class="sinborde"></th>
@@ -220,7 +220,9 @@
             <th style='padding: 5px; color: white; background-color: #28458E'>Respuesta 22</th>
         </tr>
         <tbody>
-            <?php if (isset($registros)) { echo $registros; }; ?>
+            <?php foreach ($registros as $key => $row) {
+                echo $row;
+            } //if (isset($registros)) { echo $registros; }; ?>
         </tbody>
     </table>
 

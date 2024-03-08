@@ -635,7 +635,7 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
 
  /* get_encuesta_descarga  */
  function get_encuestas_filtradas($ide,&$count,$year,$month,$opc) {
-  $start_time = microtime(true);  
+  $start_time = microtime(true);
   // $idenc = encrypt_decrypt('e',$ide);
   $salida = "";
   $count  = 0;
@@ -644,16 +644,19 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
   $inicio = date_format(date_create($year),"d/m/Y");
   $fin = date_format(date_create($month),"d/m/Y");
 
+
+  // $rows_array = array();
+
   try {
     $db = db_connect();
-    $queryTotal ="SELECT COUNT(*) total FROM v_encuestas_enviadas 
+    $queryTotal ="SELECT COUNT(*) total FROM v_encuestas_enviadas
                WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'";
-    
+
     $result = $db->query($queryTotal);
     foreach ($result->getResultArray() as $reg) {
       $total = $reg['total'];
     }
-   
+
     $count = $total;
 
     if($opc == 1){
@@ -661,16 +664,16 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
     }else{
       $stop = 0;
     }
-    
+
 
     if($total > 0){
-    
-      do {  
-      $query = "SELECT * FROM v_encuestas_enviadas 
-      WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."' 
+
+      do {
+      $query = "SELECT * FROM v_encuestas_enviadas
+      WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'
       ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'),hora
       Limit $index, 500";
-  
+
       $registros = $db->query($query);
       foreach ($registros->getResultArray() as $reg) {
           $salida .= "<tr>
@@ -725,19 +728,23 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
                               <td style='text-align: left;'>".$reg["Pregunta_22"]."</td>
                               <td style='text-align: left;'>".$reg["Respuesta_22"]."</td>
                           </tr>";
+
+      array_push($rows_array, $row);
+      // print_r($stack);
       }
       $total = $total - 500;
-      $index += 500;   
+      $index += 500;
+
       } while ($total >0);
-  }
-               
+
+
     // if($ide > 0){
-    //   $query ="SELECT * FROM v_encuestas_enviadas 
-    //            WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."' 
+    //   $query ="SELECT * FROM v_encuestas_enviadas
+    //            WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'
     //            ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'),hora";
     // }
 
-  
+
     // $registros = $db->query($query);
     // foreach ($registros->getResultArray() as $reg) {
     //         $salida  .= "<tr>
@@ -806,8 +813,107 @@ $segundos = $end_time - ($horas * 3600) - ($minutos * 60);
 
 $tiempo = 'Registros consultados: '.$count.' en el tiempo '. $horas . ':' . $minutos . ":" . $segundos;
 
-  return $count."<separador>".$salida."<separador>".$tiempo;
+// return $rows_array;
+return $count."<separador>".$salida."<separador>".$tiempo;
 }
+
+//----------------------------------------------------------------------------------------------------
+
+function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
+  $start_time = microtime(true);
+  $salida = "";
+  $headTable = "";
+  $preguntas ="";
+  $count  = 0;
+  $nombre = "";
+  $index = 0;
+  $inicio = date_format(date_create($year),"d/m/Y");
+  $fin = date_format(date_create($month),"d/m/Y");
+
+  try {
+    $db = db_connect();
+    $queryTotal ="SELECT COUNT(*) total FROM v_encuestas_enviadas
+               WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'";
+
+    $result = $db->query($queryTotal);
+    foreach ($result->getResultArray() as $reg) {
+      $total = $reg['total'];
+    }
+
+    $count = $total;
+
+    if($opc == 1){
+      $stop = $total;
+    }else{
+      $stop = 0;
+    }
+
+
+    if($total > 0){
+
+      do {
+      $query = "SELECT * FROM v_encuestas_enviadas
+      WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'
+      ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'),hora
+      Limit $index, 500";
+
+      $registros = $db->query($query);
+      $data = $registros->getResultArray();
+      $array = $data[0];
+
+      $headTable = "
+                <th style='padding: 5px; color: white; background-color: #28458E'>Fecha</th>
+                <th style='padding: 5px; color: white; background-color: #28458E'>Hora</th>
+                <th style='padding: 5px; color: white; background-color: #28458E'>Nombre</th>
+                <th style='padding: 5px; color: white; background-color: #28458E'>Correo</th>
+                <th style='padding: 5px; color: white; background-color: #28458E'>Teléfono</th>
+                <th style='padding: 5px; color: white; background-color: #28458E'>IP</th>
+      ";
+      for($i=1; $i <= 22; $i++) {
+        if($data[0]['Pregunta_'.$i] != ''){
+          $headTable .= "<th style='padding: 5px; color: white; background-color: #28458E'>". $data[0]['Pregunta_'.$i.'']."</th>";
+        }
+      }
+
+
+      foreach ($registros->getResultArray() as $reg) {
+          $salida .= "<tr>
+                              <td style='text-align: center;'>".$reg["fecha"]."</td>
+                              <td style='text-align: center;'>".$reg["hora"]."</td>
+                              <td style='text-align: left;'>".$reg["nombre"]."</td>
+                              <td style='text-align: left;'>".$reg["correo"]."</td>
+                              <td style='text-align: left;'>".$reg["telefono"]."</td>
+                              <td style='text-align: center;'>".$reg["ip"]."</td>";
+                          for($i=1; $i <= 22; $i++) {
+                            if($i < 18){
+                              $salida .= "<td style='text-align: left;'>". $reg['Respuesta_'.$i.'']."</td>";
+                            }
+                          }
+                          $salida .= "</tr>";
+      }
+      $total = $total - 500;
+      $index += 500;
+      } while ($total > 0);
+  }
+    $db->close();
+  } catch (\Exception $e) {
+    $salida = $e->getMessage();
+  }
+
+  $end_time = ( microtime(true) - $start_time);
+$horas = floor($end_time/ 3600);
+$minutos = floor(($end_time - ($horas * 3600)) / 60);
+$segundos = $end_time - ($horas * 3600) - ($minutos * 60);
+$tiempo = 'Registros consultados: '.$count.' en el tiempo '. $horas . ':' . $minutos . ":" . $segundos;
+
+  // var_dump($array);
+  // return $headTable;
+  return $count."<separador>".$salida."<separador>".$tiempo."<separador>".$headTable;
+
+
+
+}// end new filter
+//-----------------------------------------------------------------------------------------------------
 
  /* get_logs_descarga */
 function get_logs_descarga(&$count) {
@@ -845,8 +951,8 @@ function get_logs_descarga(&$count) {
   } catch (\Exception $e) {
     $salida = $e;
   }
-  return $salida;
-  //return $salida =$count."<separador>".$consulta;
+  // return $headTable;
+  return $salida =$count."<separador>".$consulta;
 }
 
 function get_all_records(){

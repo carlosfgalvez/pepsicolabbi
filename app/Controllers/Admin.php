@@ -85,6 +85,59 @@ class Admin extends BaseController
     return view($view,$data);
 }
 
+//--------------------------------------------------------------------------------------
+//------------------------INICIO DESCARGA EXCEL BETA------------------------------------
+//--------------------------------------------------------------------------------------
+public function encuestadescarga2($idencrypt=null,$year=null,$month=null, $opc=null) {
+  $ide= encrypt_decrypt('d',$idencrypt);
+  // Obtener datos comunes a todas las vistas
+  $data = $this->getData('admin');  // BaseController
+  if ($year==null) {$year = date("Y");}
+  if ($month==null) {$month = date("m");}
+  // Validar la sessión
+  if (validDataSession($token,$rol)) {
+    // get encuesta
+    $enc  = get_encuesta($ide);
+
+    // Obtener datos del usuario
+    $id  = $data['id'];
+    //$data['reg'] = get_registro_admin($id);
+
+    $hoy 	      = date("d-m-Y H:i:s");
+    $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
+    $titulo     = $enc['nombre'];
+    $count      = 0;
+    $registros  = get_encuestas_filtradas2($ide,$count,$year,$month, $opc);
+    $config     = get_config_bd();
+
+    $resultados_filtrados = explode("<separador>", $registros);
+
+    // $data['count_enviadas']  = get_enviadas_count($ide);
+
+    $data['config']    = $config;
+    $data['filename']  = $filename;
+    $data['titulo']    = $titulo;
+    $data['count_enviadas'] = $resultados_filtrados[0];
+    $data['hoy']        = $hoy;
+    $data['registros']  = $resultados_filtrados[1];
+    $data['year']       = $year;
+    $data['month']      = $month;
+
+    $data['headTable'] = $resultados_filtrados[3];
+
+    $data['view_navbar'] = view('template/navbar',$data);
+    $view = "admin/descargaencuesta2";
+  } else {
+    $view = "home/login";
+  }
+
+  return view($view,$data);
+}
+//--------------------------------------------------------------------------------------
+//-------------------------FINAL DESCARGA EXCEL BETA------------------------------------
+//--------------------------------------------------------------------------------------
+
+
 /* ver registros de encuestas enviadas */
 public function VerEncuestasEnviadas($idencrypt=null,$year=null,$month=null) {
   $ide= encrypt_decrypt('d',$idencrypt);
@@ -165,6 +218,27 @@ public function VerEncuestasEnviadasFiltra() {
 
     $data['view_navbar'] = view('template/navbar',$data);
     $view = "admin/verEncuestasEnviadasFiltra";
+  } else {
+    $view = "home/login";
+  }
+
+  return view($view,$data);
+}
+
+public function VerEncuestasEnviadasFiltra2() {
+
+  $data = $this->getData('admin');  
+  if (validDataSession($token,$rol)) {
+
+    $hoy 	      = date("d-m-Y H:i:s");
+    $count      = 0;
+
+    $data['titulo']     = 'Selecciona el rango de fechas a consultar';//$titulo;
+    $data['count']      = $count;
+    $data['list_encuestas']           = get_list_encuestas(0,"(Todas las encuestas)");
+
+    $data['view_navbar'] = view('template/navbar',$data);
+    $view = "admin/verEncuestasEnviadasFiltra2";
   } else {
     $view = "home/login";
   }
