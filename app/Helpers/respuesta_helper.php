@@ -640,7 +640,7 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
   $salida = "";
   $count  = 0;
   $nombre = "";
-  $index = 1;
+  $index = 0;
   $inicio = date_format(date_create($year),"d/m/Y");
   $fin = date_format(date_create($month),"d/m/Y");
 
