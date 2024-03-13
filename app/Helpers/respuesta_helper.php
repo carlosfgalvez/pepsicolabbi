@@ -650,7 +650,10 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
   try {
     $db = db_connect();
     $queryTotal ="SELECT COUNT(*) total FROM v_encuestas_enviadas
-               WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'";
+               WHERE id_encuesta = ".$ide." AND STR_TO_DATE(fecha,'%d/%m/%Y')
+               BETWEEN STR_TO_DATE('".$inicio."','%d/%m/%Y')
+                   AND STR_TO_DATE('".$fin."','%d/%m/%Y')";
+               /*WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'";               */
 
     $result = $db->query($queryTotal);
     foreach ($result->getResultArray() as $reg) {
@@ -670,8 +673,11 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
 
       do {
       $query = "SELECT * FROM v_encuestas_enviadas
-      WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'
-      Limit $index, 500";
+       WHERE id_encuesta = ".$ide." AND STR_TO_DATE(fecha,'%d/%m/%Y')
+        BETWEEN STR_TO_DATE('".$inicio."','%d/%m/%Y')
+           AND STR_TO_DATE('".$fin."','%d/%m/%Y')
+       /*WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'*/
+       Limit $index, 500";
 
       $registros = $db->query($query);
       foreach ($registros->getResultArray() as $reg) {
@@ -831,7 +837,10 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
   try {
     $db = db_connect();
     $queryTotal ="SELECT COUNT(*) total FROM v_encuestas_enviadas
-               WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'";
+               WHERE id_encuesta = ".$ide." AND STR_TO_DATE(fecha,'%d/%m/%Y')
+               BETWEEN STR_TO_DATE('".$inicio."','%d/%m/%Y')
+                   AND STR_TO_DATE('".$fin."','%d/%m/%Y')";
+               /*WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'";*/
 
     $result = $db->query($queryTotal);
     foreach ($result->getResultArray() as $reg) {
@@ -851,7 +860,10 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
 
       do {
       $query = "SELECT * FROM v_encuestas_enviadas
-      WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'
+        WHERE id_encuesta = ".$ide." AND STR_TO_DATE(fecha,'%d/%m/%Y')
+        BETWEEN STR_TO_DATE('".$inicio."','%d/%m/%Y')
+            AND STR_TO_DATE('".$fin."','%d/%m/%Y')
+       /*WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'*/
       Limit $index, 500";
 
       $registros = $db->query($query);
