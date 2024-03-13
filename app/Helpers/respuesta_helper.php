@@ -671,8 +671,7 @@ function get_encuesta_descarga($ide,&$count,$year,$month) {
       do {
       $query = "SELECT * FROM v_encuestas_enviadas
       WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'
-      ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'),hora";
-     // Limit $index, 500";
+      Limit $index, 500";
 
       $registros = $db->query($query);
       foreach ($registros->getResultArray() as $reg) {
@@ -853,7 +852,6 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
       do {
       $query = "SELECT * FROM v_encuestas_enviadas
       WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'
-      ORDER BY STR_TO_DATE(fecha,'%d/%m/%Y'),hora
       Limit $index, 500";
 
       $registros = $db->query($query);
@@ -885,7 +883,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
                               <td style='text-align: left;'>".$reg["telefono"]."</td>
                               <td style='text-align: center;'>".$reg["ip"]."</td>";
                           for($i=1; $i <= 22; $i++) {
-                            if($i < $num_respuestas){
+                            if($i <= $num_respuestas){
                               $salida .= "<td style='text-align: left;'>". $reg['Respuesta_'.$i.'']."</td>";
                             }
                           }

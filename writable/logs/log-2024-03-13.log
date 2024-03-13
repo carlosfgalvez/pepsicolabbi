@@ -1,0 +1,24 @@
+CRITICAL - 2024-03-13 18:42:32 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Admin.php on line 147.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(285): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(263): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\Admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(481): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-13 13:01:04 --> date_format(): Argument #1 ($object) must be of type DateTimeInterface, bool given
+in APPPATH\Helpers\respuesta_helper.php on line 644.
+ 1 APPPATH\Helpers\respuesta_helper.php(644): date_format(false, 'd/m/Y')
+ 2 APPPATH\Controllers\Admin.php(63): get_encuestas_filtradas(false, 0, '01', '03', '')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescarga('2024', '01', '03', '', '')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-13 13:23:33 --> Undefined array key 1
+in APPPATH\Controllers\Admin.php on line 74.
+ 1 APPPATH\Controllers\Admin.php(74): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Controllers\\Admin.php', 74)
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->encuestadescargas('2024', '01', '03', '')
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

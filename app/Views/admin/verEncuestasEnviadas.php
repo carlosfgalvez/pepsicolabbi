@@ -77,7 +77,7 @@
 
     <div class="center mt-3">
         <a href="<?=$url_base;?>admin" class="btn btn-outline-secondary btn-sm" role="button">Regresar</a>
-        <a class="btn btn-success" href="<?=$url_base;?>admin/encuestadescarga/<?=$id_encuesta;?>/<?=$year;?>/<?=$month;?>"
+        <a class="btn btn-success" href="<?=$url_base;?>admin/encuestadescarga1/<?=$id_encuesta;?>/<?=$year;?>/<?=$month;?>"
             id="btnDescargaEncuesta">Descargar Excel</a>
     </div>
 

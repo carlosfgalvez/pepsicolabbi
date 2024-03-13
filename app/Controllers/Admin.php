@@ -40,6 +40,52 @@ class Admin extends BaseController
     return view($view,$data);  //return view('welcome_message');
   }
 
+  public function encuestadescargas($idencrypt=null,$year=null,$month=null, $opc=null) {
+    $ide= encrypt_decrypt('d',$idencrypt);
+    // Obtener datos comunes a todas las vistas
+    $data = $this->getData('admin');  // BaseController
+    if ($year==null) {$year = date("Y");}
+    if ($month==null) {$month = date("m");}
+    // Validar la sessión
+    if (validDataSession($token,$rol)) {
+      // get encuesta
+      $enc  = get_encuesta($ide);
+
+      // Obtener datos del usuario
+      $id  = $data['id'];
+      //$data['reg'] = get_registro_admin($id);
+
+      $hoy 	      = date("d-m-Y H:i:s");
+      $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
+      $titulo     = $enc['nombre'];
+      $count      = 0;
+      $registros  = get_encuesta_descarga($ide,$count,$year,$month);
+      $config     = get_config_bd();
+
+      // $resultados_filtrados = explode("<separador>", $registros);
+
+      $data['count_enviadas']  = get_enviadas_count($ide);
+
+      $data['config']    = $config;
+      $data['filename']  = $filename;
+      $data['titulo']    = $titulo;
+      // $data['count_enviadas'] = $resultados_filtrados[0];
+      $data['hoy']        = $hoy;
+      $data['registros']  = $registros;
+      $data['year']       = $year;
+      $data['month']      = $month;
+
+      $data['view_navbar'] = view('template/navbar',$data);
+
+      $view = "admin/descargaencuesta";
+    } else {
+      $view = "home/login";
+    }
+
+    // echo $registros;
+    return view($view,$data);
+}
+
   /* encuesta descarga */
   public function encuestadescarga($idencrypt=null,$year=null,$month=null, $opc=null) {
     $ide= encrypt_decrypt('d',$idencrypt);

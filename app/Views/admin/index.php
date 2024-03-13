@@ -68,6 +68,9 @@
             <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>encuestas/1">Configurar Encuesta</a>
             <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>preguntas/1">Configurar Preguntas</a>
             <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>opciones/1">Configurar Opciones</a>
+            <a class="btn btn-primary" id="btnVerEnviadas1" style="margin: 5px;"
+                href="<?=$url_base;?>admin/verenviadas">Encuestas Enviadas Mes/Año
+            </a>
             <a class="btn btn-primary" id="btnVerEnviadas" style="margin: 5px;"
                 href="<?=$url_base;?>admin/verenviadasfiltro">Encuestas Enviadas
             </a>

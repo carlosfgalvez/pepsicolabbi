@@ -338,17 +338,17 @@ function get_encuesta_count(ide, url) {
       if (data != "" && count > 0) {
         $("#count_enviadas").text(count);
         $("#ultima_enviada").text(fecha);
-        // if (ide != "0") {
+        if (ide != "0") {
         //   // $("#btnDescargaEncuesta").attr("href", urldescarga);
         //   // $("#btnDescargaEncuesta").removeClass("hide");
-        //   // $("#btnVerEnviadas").attr("href", urlvista);
+          $("#btnVerEnviadas1").attr("href", urlvista);
         //   // $("#btnVerEnviadas").removeClass("hide");
-        // } else {
+        } else {
         //   $("#btnDescargaEncuesta").attr("href", "");
         //   $("#btnDescargaEncuesta").addClass("hide");
-        //   // $("#btnVerEnviadas").attr("href", "");
+          $("#btnVerEnviadas1").attr("href", "");
         //   // $("#btnVerEnviadas").addClass("hide");
-        // }
+        }
       } else {
         $("#count_enviadas").text(0);
         $("#ultima_enviada").text("");
@@ -379,6 +379,7 @@ function filtrarEncuestas(ide, inicio, fin, url) {
         $("#count").text('Total: '+count);
         var btnExcel = "<a class='btn btn-success' href='"+url+"admin/encuestadescarga/"+ide+"/"+inicio+"/"+fin+"/0' id='btnDescargaEncuesta'>Descargar Excel</a>";
         $("#descarga").html(btnExcel);
+        console.log(tiempo);
         ocultaProcesando();
       }else{
         $("#count").text('');
@@ -386,7 +387,6 @@ function filtrarEncuestas(ide, inicio, fin, url) {
         $("#count").text('No hay resultados');
         ocultaProcesando();
       }
-      console.log(words.length);
     },
   });
   // return count;
@@ -408,18 +408,20 @@ function filtrarEncuestas2(ide, inicio, fin, url) {
       var tiempo = data.split("<separador>")[2];
       var head = data.split("<separador>")[3];
 
-      words = registros.split('<separa>');
-
+      // var respuestas = registros.split('<separa>');
+      // var aux = count;
 
       if (count > 0) {
         $("#headTable").html("");
         $("#headTable").html(head);
-        $("#listRegistros").html("");
-        // $("#listRegistros").html(registros);
+        $("#listRegistros").html("");       
+        $("#listRegistros").html(registros);       
+        // respuestas.forEach((e) => $("#listRegistros").append(e));
         $("#count").text('');
         $("#count").text('Total: '+count);
         var btnExcel = "<a class='btn btn-success' href='"+url+"admin/encuestadescarga2/"+ide+"/"+inicio+"/"+fin+"/0' id='btnDescargaEncuesta'>Descargar Excel</a>";
         $("#descarga").html(btnExcel);
+        console.log(tiempo);
         ocultaProcesando();
       }else{
         $("#headTable").html("");
@@ -428,7 +430,7 @@ function filtrarEncuestas2(ide, inicio, fin, url) {
         $("#count").text('No hay resultados');
         ocultaProcesando();
       }
-      console.log(words.length);
+      // console.log();
     },
   });
 }
