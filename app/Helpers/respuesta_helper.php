@@ -857,20 +857,34 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
       $stop = 0;
     }
 
-
-    if($total > 0){
-      $start_time_consulta = microtime(true);
-      do {
-      $query = "SELECT * FROM v_encuestas_enviadas
-        WHERE id_encuesta = ".$ide." AND STR_TO_DATE(fecha,'%d/%m/%Y')
-        BETWEEN STR_TO_DATE('".$inicio."','%d/%m/%Y')
-            AND STR_TO_DATE('".$fin."','%d/%m/%Y')
-       /*WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'*/
-      Limit $index, 500";
-
-      $registros = $db->query($query);
-      $data = $registros->getResultArray();
-      $array = $data[0];
+    $cabeceras ="SELECT id_encuesta,GROUP_CONCAT(CASE orden WHEN 1 THEN pregunta ELSE NULL END) AS Pregunta_1
+    ,GROUP_CONCAT(CASE orden WHEN 2 THEN pregunta ELSE NULL END) AS Pregunta_2
+    ,GROUP_CONCAT(CASE orden WHEN 3 THEN pregunta ELSE NULL END) AS Pregunta_3
+    ,GROUP_CONCAT(CASE orden WHEN 4 THEN pregunta ELSE NULL END) AS Pregunta_4
+    ,GROUP_CONCAT(CASE orden WHEN 5 THEN pregunta ELSE NULL END) AS Pregunta_5
+    ,GROUP_CONCAT(CASE orden WHEN 6 THEN pregunta ELSE NULL END) AS Pregunta_6
+    ,GROUP_CONCAT(CASE orden WHEN 7 THEN pregunta ELSE NULL END) AS Pregunta_7
+    ,GROUP_CONCAT(CASE orden WHEN 8 THEN pregunta ELSE NULL END) AS Pregunta_8
+    ,GROUP_CONCAT(CASE orden WHEN 9 THEN pregunta ELSE NULL END) AS Pregunta_9
+    ,GROUP_CONCAT(CASE orden WHEN 10 THEN pregunta ELSE NULL END) AS Pregunta_10
+    ,GROUP_CONCAT(CASE orden WHEN 11 THEN pregunta ELSE NULL END) AS Pregunta_11
+    ,GROUP_CONCAT(CASE orden WHEN 12 THEN pregunta ELSE NULL END) AS Pregunta_12
+    ,GROUP_CONCAT(CASE orden WHEN 13 THEN pregunta ELSE NULL END) AS Pregunta_13
+    ,GROUP_CONCAT(CASE orden WHEN 14 THEN pregunta ELSE NULL END) AS Pregunta_14
+    ,GROUP_CONCAT(CASE orden WHEN 15 THEN pregunta ELSE NULL END) AS Pregunta_15
+    ,GROUP_CONCAT(CASE orden WHEN 16 THEN pregunta ELSE NULL END) AS Pregunta_16
+    ,GROUP_CONCAT(CASE orden WHEN 17 THEN pregunta ELSE NULL END) AS Pregunta_17
+    ,GROUP_CONCAT(CASE orden WHEN 18 THEN pregunta ELSE NULL END) AS Pregunta_18
+    ,GROUP_CONCAT(CASE orden WHEN 19 THEN pregunta ELSE NULL END) AS Pregunta_19
+    ,GROUP_CONCAT(CASE orden WHEN 20 THEN pregunta ELSE NULL END) AS Pregunta_20
+    ,GROUP_CONCAT(CASE orden WHEN 21 THEN pregunta ELSE NULL END) AS Pregunta_21
+    ,GROUP_CONCAT(CASE orden WHEN 22 THEN pregunta ELSE NULL END) AS Pregunta_22
+    from encuestas_preguntas
+    WHERE id_encuesta = $ide
+    group by id_encuesta";
+    
+      $cabeceraResult = $db->query($cabeceras);
+      $data = $cabeceraResult->getResultArray();
 
       $headTable = "
                 <th style='padding: 5px; color: white; background-color: #28458E'>Fecha</th>
@@ -886,6 +900,50 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
           $headTable .= "<th style='padding: 5px; color: white; background-color: #28458E'>". $data[0]['Pregunta_'.$i.'']."</th>";
         }
       }
+
+
+    if($total > 0){
+      $start_time_consulta = microtime(true);
+      do {
+      $query = "SELECT 
+        id,
+        id_encuesta,
+        fechahora,
+        fecha,
+        hora,
+        ip,nombre,correo,telefono,
+        Respuesta_1,
+        Respuesta_2,
+        Respuesta_3,
+        Respuesta_4,
+        Respuesta_5,
+        Respuesta_6,
+        Respuesta_7,
+        Respuesta_8,
+        Respuesta_9,
+        Respuesta_10,
+        Respuesta_11,
+        Respuesta_12,
+        Respuesta_13,
+        Respuesta_14,
+        Respuesta_15,
+        Respuesta_16,
+        Respuesta_17,
+        Respuesta_18,
+        Respuesta_19,
+        Respuesta_20,
+        Respuesta_21,
+        Respuesta_22
+       FROM v_encuestas_enviadas
+        WHERE id_encuesta = ".$ide." AND STR_TO_DATE(fecha,'%d/%m/%Y')
+        BETWEEN STR_TO_DATE('".$inicio."','%d/%m/%Y')
+            AND STR_TO_DATE('".$fin."','%d/%m/%Y')
+       /*WHERE id_encuesta = ".$ide." AND fecha BETWEEN '".$inicio."' AND '".$fin."'*/
+      Limit $index, $total";
+
+
+      $registros = $db->query($query);
+      
 
       $start_time_cadena = microtime(true);
       foreach ($registros->getResultArray() as $reg) {
@@ -918,8 +976,9 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
       }
       $end_time_cadena = ( microtime(true) - $start_time_cadena);
 
-      $total = $total - 500;
-      $index += 500;
+      // $total = $total - 500;
+      $total = 0;
+      // $index += 500;
       } while ($total > 0);
       $end_time_consulta = ( microtime(true) - $start_time_consulta);
   }
@@ -1039,6 +1098,51 @@ function get_data_encuestas($ide,$year,$month) {
       // $idenc = encrypt_decrypt('e',$ide);
       
         $db = db_connect();
+// ---------------------------------------
+$cabeceras ="SELECT id_encuesta,GROUP_CONCAT(CASE orden WHEN 1 THEN pregunta ELSE NULL END) AS Pregunta_1
+    ,GROUP_CONCAT(CASE orden WHEN 2 THEN pregunta ELSE NULL END) AS Pregunta_2
+    ,GROUP_CONCAT(CASE orden WHEN 3 THEN pregunta ELSE NULL END) AS Pregunta_3
+    ,GROUP_CONCAT(CASE orden WHEN 4 THEN pregunta ELSE NULL END) AS Pregunta_4
+    ,GROUP_CONCAT(CASE orden WHEN 5 THEN pregunta ELSE NULL END) AS Pregunta_5
+    ,GROUP_CONCAT(CASE orden WHEN 6 THEN pregunta ELSE NULL END) AS Pregunta_6
+    ,GROUP_CONCAT(CASE orden WHEN 7 THEN pregunta ELSE NULL END) AS Pregunta_7
+    ,GROUP_CONCAT(CASE orden WHEN 8 THEN pregunta ELSE NULL END) AS Pregunta_8
+    ,GROUP_CONCAT(CASE orden WHEN 9 THEN pregunta ELSE NULL END) AS Pregunta_9
+    ,GROUP_CONCAT(CASE orden WHEN 10 THEN pregunta ELSE NULL END) AS Pregunta_10
+    ,GROUP_CONCAT(CASE orden WHEN 11 THEN pregunta ELSE NULL END) AS Pregunta_11
+    ,GROUP_CONCAT(CASE orden WHEN 12 THEN pregunta ELSE NULL END) AS Pregunta_12
+    ,GROUP_CONCAT(CASE orden WHEN 13 THEN pregunta ELSE NULL END) AS Pregunta_13
+    ,GROUP_CONCAT(CASE orden WHEN 14 THEN pregunta ELSE NULL END) AS Pregunta_14
+    ,GROUP_CONCAT(CASE orden WHEN 15 THEN pregunta ELSE NULL END) AS Pregunta_15
+    ,GROUP_CONCAT(CASE orden WHEN 16 THEN pregunta ELSE NULL END) AS Pregunta_16
+    ,GROUP_CONCAT(CASE orden WHEN 17 THEN pregunta ELSE NULL END) AS Pregunta_17
+    ,GROUP_CONCAT(CASE orden WHEN 18 THEN pregunta ELSE NULL END) AS Pregunta_18
+    ,GROUP_CONCAT(CASE orden WHEN 19 THEN pregunta ELSE NULL END) AS Pregunta_19
+    ,GROUP_CONCAT(CASE orden WHEN 20 THEN pregunta ELSE NULL END) AS Pregunta_20
+    ,GROUP_CONCAT(CASE orden WHEN 21 THEN pregunta ELSE NULL END) AS Pregunta_21
+    ,GROUP_CONCAT(CASE orden WHEN 22 THEN pregunta ELSE NULL END) AS Pregunta_22
+    from encuestas_preguntas
+    WHERE id_encuesta = $ide
+    group by id_encuesta";
+    
+      $cabeceraResult = $db->query($cabeceras);
+      $data = $cabeceraResult->getResultArray();
+
+      $headTable = array("Fecha",
+                "Hora",
+               "Nombre",
+                "Correo",
+                "Teléfono",
+                "IP");
+
+      // array_push($headTable, $data[0]);
+      for($i=1; $i <= 22; $i++) {
+        if($data[0]['Pregunta_'.$i] != ''){
+          array_push($headTable, $data[0]['Pregunta_'.$i.'']);
+        }
+      }
+
+//-----------------------------------------
         $ide  = $db->escapeString(strip_tags($ide));
         $inicio = date_format(date_create($year),"d/m/Y");
         $fin = date_format(date_create($month),"d/m/Y");
@@ -1047,7 +1151,33 @@ function get_data_encuestas($ide,$year,$month) {
         // WHERE id_encuesta = $ide
         // AND DATE_FORMAT(STR_TO_DATE(fecha,'%d/%m/%Y'),'%m/%Y') ='".$month."/".$year."';";
 
-        $query = "SELECT * FROM v_encuestas_enviadas
+        $query = "SELECT id,id_encuesta,fechahora,
+        fecha,
+        hora,
+        ip,nombre,correo,telefono,
+        Respuesta_1,
+        Respuesta_2,
+        Respuesta_3,
+        Respuesta_4,
+        Respuesta_5,
+        Respuesta_6,
+        Respuesta_7,
+        Respuesta_8,
+        Respuesta_9,
+        Respuesta_10,
+        Respuesta_11,
+        Respuesta_12,
+        Respuesta_13,
+        Respuesta_14,
+        Respuesta_15,
+        Respuesta_16,
+        Respuesta_17,
+        Respuesta_18,
+        Respuesta_19,
+        Respuesta_20,
+        Respuesta_21,
+        Respuesta_22
+        FROM v_encuestas_enviadas
         WHERE id_encuesta = $ide
         AND STR_TO_DATE(fecha,'%d/%m/%Y')
         BETWEEN STR_TO_DATE('".$inicio."','%d/%m/%Y')
@@ -1060,7 +1190,8 @@ function get_data_encuestas($ide,$year,$month) {
             
             $f = fopen('php://memory', 'w');
 
-            $fields = array('Fecha', 'Hora', 'Nombre', 'Correo', 'Telefono', 'IP','Pregunta 1','Pregunta 2','Pregunta 3','Pregunta 4','Pregunta 5','Pregunta 6','Pregunta 7','Pregunta 8','Pregunta 9','Pregunta 10','Pregunta 11','Pregunta 12','Pregunta 13','Pregunta 14','Pregunta 15','Pregunta 16','Pregunta 17','Pregunta 18','Pregunta 19','Pregunta 20','Pregunta 21','Pregunta 22');
+            // $fields = array('Fecha', 'Hora', 'Nombre', 'Correo', 'Telefono', 'IP','Pregunta 1','Pregunta 2','Pregunta 3','Pregunta 4','Pregunta 5','Pregunta 6','Pregunta 7','Pregunta 8','Pregunta 9','Pregunta 10','Pregunta 11','Pregunta 12','Pregunta 13','Pregunta 14','Pregunta 15','Pregunta 16','Pregunta 17','Pregunta 18','Pregunta 19','Pregunta 20','Pregunta 21','Pregunta 22');
+            $fields = $headTable;
             fputcsv($f, $fields, $delimiter);
             
             foreach ($registros->getResultArray() as $row) {
@@ -1070,7 +1201,9 @@ function get_data_encuestas($ide,$year,$month) {
             
             fseek($f, 0);
             
-            header('Content-Type: text/csv');
+
+            header('Content-Type: text/csv; charset=utf-8');
+            header('Content-Encoding: utf-8');
             header('Content-Disposition: attachment; filename="' . $filename . '";');
             
             fpassthru($f);
