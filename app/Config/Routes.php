@@ -38,6 +38,13 @@ $routes->get('admin/verenviadasfiltro','Admin::VerEncuestasEnviadasFiltra');
 $routes->get('admin/verenviadasfiltro2','Admin::VerEncuestasEnviadasFiltra2');
 $routes->get('admin/logdescarga','Admin::logdescarga');
 
+$routes->get('admin/filtrarData/(:any)','Admin::FiltrarData/$1');
+$routes->get('admin/filtrarData','Admin::FiltrarData');
+$routes->get('admin/filtrarRespuesta/(:any)','Admin::filtrarRespuesta/$1/$2/$3');
+$routes->get('admin/filtraEncuesta/(:any)','Admin::filtraEncuesta/$1/$2/$3');
+$routes->get('admin/filtraBetaJoin/(:any)','Admin::filtraBetaJoin/$1/$2/$3');
+
+
 /* tabla settings */
 $routes->get('settings','Settings::index');
 $routes->get('settings/(:num)','Settings::index/$1');

@@ -325,6 +325,7 @@ function get_encuesta_count(ide, url) {
   var query = "";
   var urldescarga = url + "admin/encuestadescarga/" + ide;
   var urlvista = url + "admin/verenviadas/" + ide;
+  var filtrourl = url + "admin/filtrarData/" + ide;
 
   $.ajax({
     type: "POST",
@@ -342,11 +343,13 @@ function get_encuesta_count(ide, url) {
         //   // $("#btnDescargaEncuesta").attr("href", urldescarga);
         //   // $("#btnDescargaEncuesta").removeClass("hide");
           $("#btnVerEnviadas1").attr("href", urlvista);
+          $("#btnFiltrarData").attr("href", filtrourl);
         //   // $("#btnVerEnviadas").removeClass("hide");
         } else {
         //   $("#btnDescargaEncuesta").attr("href", "");
         //   $("#btnDescargaEncuesta").addClass("hide");
           $("#btnVerEnviadas1").attr("href", "");
+          $("#btnFiltrarData").attr("href", "");
         //   // $("#btnVerEnviadas").addClass("hide");
         }
       } else {

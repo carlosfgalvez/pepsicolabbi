@@ -292,6 +292,124 @@ public function VerEncuestasEnviadasFiltra2() {
   return view($view,$data);
 }
 
+//filtrar data 
+public function FiltrarData($idencrypt=null,$year=null,$month=null) {
+  $ide= encrypt_decrypt('d',$idencrypt);
+  // Obtener datos comunes a todas las vistas
+  $data = $this->getData('admin');  // BaseController
+  if ($year==null) {$year = date("Y");}
+  if ($month==null) {$month = date("m");}
+  // Validar la sessión
+  if (validDataSession($token,$rol)) {
+    // get encuesta
+    $enc  = get_encuesta($ide);
+
+    // Obtener datos del usuario
+    $id  = $data['id'];
+    //$data['reg'] = get_registro_admin($id);
+
+    $config     = get_config_bd();
+
+    $data['config']     = $config;
+    $data['id_encuesta']= $idencrypt;
+    $data['year']       = $year;
+    $data['month']      = $month;
+    $data['list_year']  = get_list_years_fecha($year);
+    $data['list_month'] = get_list_meses_fecha($month);
+
+    $data['view_navbar'] = view('template/navbar',$data);
+    $view = "admin/VerDataFiltrada";
+  } else {
+    $view = "home/login";
+  }
+
+  return view($view,$data);
+}
+
+public function filtraEncuesta($idencrypt=null,$year=null,$month=null) {
+  $ide= encrypt_decrypt('d',$idencrypt);
+  // Obtener datos comunes a todas las vistas
+  $data = $this->getData('admin');  // BaseController
+  if ($year==null) {$year = date("Y");}
+  if ($month==null) {$month = date("m");}
+  // Validar la sessión
+  if (validDataSession($token,$rol)) {
+    // get encuesta
+    $enc  = get_encuesta($ide);
+
+    $id  = $data['id'];
+
+    $hoy 	      = date("d-m-Y H:i:s");
+    $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
+    $titulo     = $enc['nombre'];
+    $count      = 0;
+    $registros  = get_data_encuestas($ide,$year,$month);
+    $config     = get_config_bd();
+
+
+    $view = "admin/VerDataFiltrada";
+  } else {
+    $view = "home/login";
+  }
+}
+
+  public function filtraBetaJoin($idencrypt=null,$year=null,$month=null) {
+    $ide= encrypt_decrypt('d',$idencrypt);
+    // Obtener datos comunes a todas las vistas
+    $data = $this->getData('admin');  // BaseController
+    if ($year==null) {$year = date("Y");}
+    if ($month==null) {$month = date("m");}
+    // Validar la sessión
+    if (validDataSession($token,$rol)) {
+      // get encuesta
+      $enc  = get_encuesta($ide);
+  
+      $id  = $data['id'];
+  
+      $hoy 	      = date("d-m-Y H:i:s");
+      $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
+      $titulo     = $enc['nombre'];
+      $count      = 0;
+      $registros  = get_data_beta($ide,$year,$month);
+      $config     = get_config_bd();
+  
+  
+      $view = "admin/VerDataFiltrada";
+    } else {
+      $view = "home/login";
+    }
+
+  // echo $registros;
+  return view($view,$data);
+}
+
+
+public function filtrarRespuesta($idencrypt=null,$year=null,$month=null) {
+  $ide= encrypt_decrypt('d',$idencrypt);
+  // Obtener datos comunes a todas las vistas
+  $data = $this->getData('admin');  // BaseController
+  if ($year==null) {$year = date("Y");}
+  if ($month==null) {$month = date("m");}
+  // Validar la sessión
+  if (validDataSession($token,$rol)) {
+    // get encuesta
+    $enc  = get_encuesta($ide);
+
+    $id  = $data['id'];
+
+    $hoy 	      = date("d-m-Y H:i:s");
+    $filename 	= "encuesta ".$enc['nombre']." ".$hoy.".xls";
+    $titulo     = $enc['nombre'];
+    $count      = 0;
+    $registros  = get_data_respuestas($ide,$year,$month);
+    $config     = get_config_bd();
+
+
+    $view = "admin/VerDataFiltrada";
+  } else {
+    $view = "home/login";
+  }
+}
   /* log descarga */
   public function logdescarga() {
 

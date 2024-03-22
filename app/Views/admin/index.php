@@ -77,6 +77,11 @@
             <a class="btn btn-primary" id="btnVerEnviadas" style="margin: 5px;"
                 href="<?=$url_base;?>admin/verenviadasfiltro2">Encuestas Enviadas beta
             </a>
+
+            <a class="btn btn-primary" id="btnFiltrarData" style="margin: 5px;"
+                href="<?=$url_base;?>admin/filtrarData">Filtrar Data Encuestas
+            </a>
+
             <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>contactos ">Contactos</a>
             <a class="btn btn-outline-success" style="margin: 5px;" href="<?=$url_base;?>upload">Subir Archivos</a>
             <!--<a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>enviadas">Ver Enviadas</a>-->
