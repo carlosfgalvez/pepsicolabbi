@@ -1,0 +1,8 @@
+CRITICAL - 2024-03-21 18:28:11 --> Undefined variable $end_time_consulta
+in APPPATH\Helpers\respuesta_helper.php on line 936.
+ 1 APPPATH\Helpers\respuesta_helper.php(936): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $end_time_consulta', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Helpers\\respuesta_helper.php', 936)
+ 2 APPPATH\Controllers\Respuesta.php(113): get_encuestas_filtradas2('1', '0', '2024-03-21', '2024-03-18', '1')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

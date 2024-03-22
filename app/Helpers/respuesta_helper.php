@@ -916,12 +916,12 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
                       // }
                       // $salida .= "</tr><separa>";
       }
-      $end_time_cadena = ( microtime(true) - $start_time);
+      $end_time_cadena = ( microtime(true) - $start_time_cadena);
 
       $total = $total - 500;
       $index += 500;
       } while ($total > 0);
-      $end_time_consulta = ( microtime(true) - $start_time);
+      $end_time_consulta = ( microtime(true) - $start_time_consulta);
   }
     $db->close();
   } catch (\Exception $e) {
