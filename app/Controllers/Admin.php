@@ -316,6 +316,7 @@ public function FiltrarData($idencrypt=null,$year=null,$month=null) {
     $data['month']      = $month;
     $data['list_year']  = get_list_years_fecha($year);
     $data['list_month'] = get_list_meses_fecha($month);
+    $data['list_encuestas']           = get_list_encuestas(0,"(Todas las encuestas)");
 
     $data['view_navbar'] = view('template/navbar',$data);
     $view = "admin/VerDataFiltrada";

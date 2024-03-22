@@ -92,3 +92,64 @@ in SYSTEMPATH\Database\BaseConnection.php on line 646.
  4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
  5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-03-22 14:49:11 --> Undefined variable $list_encuestas
+in APPPATH\Views\admin\VerDataFiltrada.php on line 10.
+ 1 APPPATH\Views\admin\VerDataFiltrada.php(10): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $list_encuestas', 'C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\VerDataFiltrada.php', 10)
+ 2 SYSTEMPATH\View\View.php(226): include('C:\\xampp\\htdocs\\Eleven\\pepsicolabbi\\app\\Views\\admin\\VerDataFiltrada.php')
+ 3 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1188): CodeIgniter\View\View->render('admin/VerDataFiltrada', [], true)
+ 5 APPPATH\Controllers\Admin.php(326): view('admin/VerDataFiltrada', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->FiltrarData('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09')
+ 7 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-22 15:59:38 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '00:00:00
+    AND fecha <= 2024-02-22 12:00:00' at line 3 in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * from e...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * from e...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * from e...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(978): CodeIgniter\Database\BaseConnection->query('SELECT * from e...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Admin.php(347): get_data_encuestas('1', '2024-02-22', '2024-02-22')
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Admin->filtraEncuesta('bUdjRG5GeWxvQ1l...', '2024-02-22', '2024-02-22', '', '')
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-22 15:59:38 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '00:00:00
+    AND fecha <= 2024-02-22 12:00:00' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(978): CodeIgniter\Database\BaseConnection->query('SELECT * from enviadas 
+    WHERE id_encuesta = 1 
+    AND fecha >= 2024-02-22 00:00:00
+    AND fecha <= 2024-02-22 12:00:00;')
+ 2 APPPATH\Controllers\Admin.php(347): get_data_encuestas('1', '2024-02-22', '2024-02-22')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->filtraEncuesta('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-22', '2024-02-22', '', '')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-03-22 16:01:23 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '00:00:00
+    AND fecha <= 2024-02-22 12:00:00' at line 3 in C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php:306
+Stack trace:
+#0 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\MySQLi\Connection.php(306): mysqli->query('SELECT * from e...', 0)
+#1 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * from e...')
+#2 C:\xampp\htdocs\Eleven\pepsicolabbi\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * from e...')
+#3 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\respuesta_helper.php(978): CodeIgniter\Database\BaseConnection->query('SELECT * from e...')
+#4 C:\xampp\htdocs\Eleven\pepsicolabbi\app\Controllers\Admin.php(347): get_data_encuestas('1', '2024-02-22', '2024-02-22')
+#5 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(919): App\Controllers\Admin->filtraEncuesta('bUdjRG5GeWxvQ1l...', '2024-02-22', '2024-02-22', '', '')
+#6 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+#7 C:\xampp\htdocs\Eleven\pepsicolabbi\system\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\Eleven\pepsicolabbi\index.php(79): CodeIgniter\CodeIgniter->run()
+#9 {main}
+CRITICAL - 2024-03-22 16:01:23 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '00:00:00
+    AND fecha <= 2024-02-22 12:00:00' at line 3
+in SYSTEMPATH\Database\BaseConnection.php on line 646.
+ 1 APPPATH\Helpers\respuesta_helper.php(978): CodeIgniter\Database\BaseConnection->query('SELECT * from enviadas 
+    WHERE id_encuesta = 1 
+    AND fecha >= 2024-02-22 00:00:00
+    AND fecha <= 2024-02-22 12:00:00;')
+ 2 APPPATH\Controllers\Admin.php(347): get_data_encuestas('1', '2024-02-22', '2024-02-22')
+ 3 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Admin->filtraEncuesta('bUdjRG5GeWxvQ1lFQVVMckR0cFRLUT09', '2024-02-22', '2024-02-22', '', '')
+ 4 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

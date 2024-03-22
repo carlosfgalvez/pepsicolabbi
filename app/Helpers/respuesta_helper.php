@@ -965,8 +965,12 @@ function get_data_encuestas($ide,$year,$month) {
     $db = db_connect();
     $ide  = $db->escapeString(strip_tags($ide));
 
+    $inicio = $year.' 00:00:00';
+    $fin = $month.' 12:00:00';
+
     // $query = $db->query("SELECT * from enviadas where id_encuesta = 1 and date_format(fecha,'%m/%Y') = '".$month."/".$year."';");
-    $query = "SELECT * from enviadas where id_encuesta = $ide and date_format(fecha,'%m/%Y') = '".$month."/".$year."';";
+    // $query = "SELECT * from enviadas where id_encuesta = $ide and date_format(fecha,'%m/%Y') = '".$month."/".$year."';";
+    $query = "SELECT * from enviadas WHERE id_encuesta = $ide AND fecha >= '".$inicio."' AND fecha <= '".$fin."'";
 
     $registros = $db->query($query);
 
@@ -998,8 +1002,13 @@ function get_data_encuestas($ide,$year,$month) {
     
       $db = db_connect();
       $ide  = $db->escapeString(strip_tags($ide));
+
+      $inicio = $year.' 00:00:00';
+      $fin = $month.' 12:00:00';
   
-      $query = "SELECT * from enviadas_respuestas where id_encuesta = $ide and date_format(fecha,'%m/%Y') = '".$month."/".$year."';";
+      // $query = "SELECT * from enviadas_respuestas where id_encuesta = $ide and date_format(fecha,'%m/%Y') = '".$month."/".$year."';";
+      $query = "SELECT * from enviadas_respuestas WHERE id_encuesta = $ide AND fecha >= '".$inicio."' AND fecha <= '".$fin."'";
+
       $registros = $db->query($query);
 
           $delimiter = ",";
@@ -1031,10 +1040,18 @@ function get_data_encuestas($ide,$year,$month) {
       
         $db = db_connect();
         $ide  = $db->escapeString(strip_tags($ide));
+        $inicio = date_format(date_create($year),"d/m/Y");
+        $fin = date_format(date_create($month),"d/m/Y");
     
+        // $query = "SELECT * FROM v_encuestas_enviadas
+        // WHERE id_encuesta = $ide
+        // AND DATE_FORMAT(STR_TO_DATE(fecha,'%d/%m/%Y'),'%m/%Y') ='".$month."/".$year."';";
+
         $query = "SELECT * FROM v_encuestas_enviadas
         WHERE id_encuesta = $ide
-        AND DATE_FORMAT(STR_TO_DATE(fecha,'%d/%m/%Y'),'%m/%Y') ='".$month."/".$year."';";
+        AND STR_TO_DATE(fecha,'%d/%m/%Y')
+        BETWEEN STR_TO_DATE('".$inicio."','%d/%m/%Y')
+        AND STR_TO_DATE('".$fin."','%d/%m/%Y')";
         
         $registros = $db->query($query);
   
