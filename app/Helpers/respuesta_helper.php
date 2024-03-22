@@ -823,7 +823,7 @@ return $count."<separador>".$salida."<separador>".$tiempo;
 //----------------------------------------------------------------------------------------------------
 
 function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
-  $start_time = microtime(true);
+  
   $salida = "";
   $headTable = "";
   $preguntas ="";
@@ -835,6 +835,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
   $fin = date_format(date_create($month),"d/m/Y");
 
   try {
+    $start_time = microtime(true);
     $db = db_connect();
     $queryTotal ="SELECT COUNT(*) total FROM v_encuestas_enviadas
                WHERE id_encuesta = ".$ide." AND STR_TO_DATE(fecha,'%d/%m/%Y')
@@ -846,6 +847,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
     foreach ($result->getResultArray() as $reg) {
       $total = $reg['total'];
     }
+    $end_time = ( microtime(true) - $start_time);
 
     $count = $total;
 
@@ -857,7 +859,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
 
 
     if($total > 0){
-
+      $start_time_consulta = microtime(true);
       do {
       $query = "SELECT * FROM v_encuestas_enviadas
         WHERE id_encuesta = ".$ide." AND STR_TO_DATE(fecha,'%d/%m/%Y')
@@ -885,7 +887,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
         }
       }
 
-
+      $start_time_cadena = microtime(true);
       foreach ($registros->getResultArray() as $reg) {
           $salida .= "<tr>
                               <td style='text-align: center;'>".$reg["fecha"]."</td>
@@ -914,20 +916,36 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
                       // }
                       // $salida .= "</tr><separa>";
       }
+      $end_time_cadena = ( microtime(true) - $start_time);
+
       $total = $total - 500;
       $index += 500;
       } while ($total > 0);
+      $end_time_consulta = ( microtime(true) - $start_time);
   }
     $db->close();
   } catch (\Exception $e) {
     $salida = $e->getMessage();
   }
 
-  $end_time = ( microtime(true) - $start_time);
-$horas = floor($end_time/ 3600);
-$minutos = floor(($end_time - ($horas * 3600)) / 60);
-$segundos = $end_time - ($horas * 3600) - ($minutos * 60);
-$tiempo = 'Registros consultados: '.$count.' en el tiempo '. $horas . ':' . $minutos . ":" . $segundos;
+  // $end_time = ( microtime(true) - $start_time);
+  $horas = floor($end_time/ 3600);
+  $minutos = floor(($end_time - ($horas * 3600)) / 60);
+  $segundos = $end_time - ($horas * 3600) - ($minutos * 60);
+
+  $horasc = floor($end_time_consulta/ 3600);
+  $minutosc = floor(($end_time_consulta - ($horasc * 3600)) / 60);
+  $segundosc = $end_time_consulta - ($horasc * 3600) - ($minutosc * 60);
+
+  $horasca = floor($end_time_cadena/ 3600);
+  $minutosca = floor(($end_time_cadena - ($horasca * 3600)) / 60);
+  $segundosca = $end_time_cadena - ($horasca * 3600) - ($minutosca * 60);
+
+  $t1 = $horas . ':' . $minutos . ":" . $segundos;
+  $t2 = $horasc . ':' . $minutosc . ":" . $segundosc;
+  $t3 = $horasca . ':' . $minutosca . ":" . $segundosca;
+
+  $tiempo = 'Registros consultados: '.$count.' tiempo count: '. $t1.' tiempo consulta: '.$t2.' tiempo itera: '.$t3;
 
   // var_dump($array);
   // return $headTable;
