@@ -79,7 +79,7 @@
             </a>
 
             <a class="btn btn-primary" id="btnFiltrarData" style="margin: 5px;"
-                href="<?=$url_base;?>admin/filtrarData">Filtrar Data Encuestas
+                href="<?=$url_base;?>admin/filtrarData">Data Raw Encuestas
             </a>
 
             <a class="btn btn-primary" style="margin: 5px;" href="<?=$url_base;?>contactos ">Contactos</a>
