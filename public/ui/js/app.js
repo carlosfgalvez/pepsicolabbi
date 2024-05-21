@@ -299,14 +299,14 @@ function validarIngreso(email, pass) {
 /******** logout *******/
 function logout(url) {
   var dataString = "&acc=4";
-  console.log("logout...");
+  console.log("logout...  "+url);
   muestraProcesando();
   $.ajax({
     type: "POST",
     url: url + "respuesta",
     data: dataString,
     success: function (data) {
-      //console.log(data);
+      // console.log("logout data...  "+data);
       ocultaProcesando();
       window.location.href = "index";
     },

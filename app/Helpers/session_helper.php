@@ -13,9 +13,9 @@
     $session->set($newdata);
 
     // set expiration time
-    //$session->markAsTempdata('token', $sessionExpiration);
-    //$session->markAsTempdata('id', $sessionExpiration);
-    //$session->markAsTempdata('rol', $sessionExpiration);
+    // $session->markAsTempdata('token', $sessionExpiration);
+    // $session->markAsTempdata('id', $sessionExpiration);
+    // $session->markAsTempdata('rol', $sessionExpiration);
   }
 
   /* getDataSession */
@@ -39,15 +39,16 @@
     $session->destroy();
   }
 
-  /* validDataSession 0=no valido, 1=valido*/
+  /* validDataSession 0=no valido, 1=valido */
   function validDataSession(&$token,&$rol){
     $valid  = false;
     $token  = getDataSession($id,$rol);
     $iddesc = encrypt_decrypt('d',$token);
+    // return $token;
 
     // Validar que exista el token y que sea igual al Id
     //if ($token!="" && $id == $iddesc) { $valid = true;}
-    if ($token!="") { $valid = true;}
+    if ($token!=0) { $valid = true;}
 
     return $valid;
   }

@@ -1,0 +1,13 @@
+CRITICAL - 2024-05-16 18:37:41 --> Cannot redeclare validDataSession() (previously declared in C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\session_helper.php:43)
+in APPPATH\Helpers\respuesta_helper.php on line 1463.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-16 18:45:08 --> Cannot redeclare getDataSession() (previously declared in C:\xampp\htdocs\Eleven\pepsicolabbi\app\Helpers\session_helper.php:22)
+in APPPATH\Helpers\respuesta_helper.php on line 1475.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2024-05-16 15:31:02 --> Unsupported operand types: string + bool
+in APPPATH\Helpers\respuesta_helper.php on line 1430.
+ 1 APPPATH\Controllers\Respuesta.php(55): logout()
+ 2 SYSTEMPATH\CodeIgniter.php(919): App\Controllers\Respuesta->acc()
+ 3 SYSTEMPATH\CodeIgniter.php(494): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Respuesta))
+ 4 SYSTEMPATH\CodeIgniter.php(353): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(79): CodeIgniter\CodeIgniter->run()

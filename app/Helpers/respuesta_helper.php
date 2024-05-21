@@ -1401,14 +1401,14 @@ function login($token,$id,$rol) {
   $hoy    = date("Y-m-d H:i:s");
 
   try{
-    $token   = strip_tags($token);
-    $id      = strip_tags($id);
-    $rol     = strip_tags($rol);
+    // $token   = strip_tags($token);
+    // $id      = strip_tags($id);
+    // $rol     = strip_tags($rol);
 
     if ($id>0) {
       setDataSession($token,$rol); // set session
       if ($rol==0) { // usuario
-        update_login($id);
+        // update_login($id);
        }
     }
   } catch (\Exception $e) {
@@ -1419,9 +1419,7 @@ function login($token,$id,$rol) {
 
 /* logout  */
 function logout() {
-  $reg    = 0;
   $salida = 0;
-  $hoy    = date("Y-m-d H:i:s");
 
   try {
     $token = 0; $rol= 0;
@@ -1431,11 +1429,12 @@ function logout() {
     if ($id>0) {
       destroyDataSession(); // set session
       if ($rol==0) { // usuario
-        update_logout($id);
+        // update_logout($id);
        }
     }
   } catch (\Exception $e) {
-    $salida = 0;
+    return ($e->getMessage());
+    // $salida = 0;
   }
   return $salida;
 }

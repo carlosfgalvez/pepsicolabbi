@@ -717,11 +717,35 @@ function login($token,$id,$rol) {
   return $salida;
 }
 
+// /* logout  */
+// function logout() {
+//   $reg    = 0;
+//   $salida = 0;
+//   $hoy    = date("Y-m-d H:i:s");
+
+//   try {
+//     $token = 0; $rol= 0;
+//     $validtoken = validDataSession($token,$rol);
+//     $id         = encrypt_decrypt('d',$token);
+
+//     if ($id>0) {
+//       destroyDataSession(); // set session
+//       if ($rol==0) { // usuario
+//         update_logout($id);
+//        }
+//     }
+//   } catch (\Exception $e) {
+//     $salida = 0;
+//   }
+//   return $salida;
+// }
+
 /* logout  */
 function logout() {
   $reg    = 0;
   $salida = 0;
   $hoy    = date("Y-m-d H:i:s");
+  return "helper en html";
 
   try {
     $token = 0; $rol= 0;
@@ -731,11 +755,13 @@ function logout() {
     if ($id>0) {
       destroyDataSession(); // set session
       if ($rol==0) { // usuario
-        update_logout($id);
+        $salida ="slida de seccion";
+        // update_logout($id);
        }
     }
   } catch (\Exception $e) {
-    $salida = 0;
+    return ($e->getMessage());
+    // $salida = 0;
   }
   return $salida;
 }

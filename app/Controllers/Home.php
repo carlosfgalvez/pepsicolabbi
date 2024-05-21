@@ -8,7 +8,7 @@ class Home extends BaseController
     {
       // Obtener datos comunes a todas las vistas
       $data = $this->getData('admin');  // BaseController
-
+      
       // banners
       $data['banners'] = get_banners();
 

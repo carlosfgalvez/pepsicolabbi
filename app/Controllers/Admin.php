@@ -15,6 +15,7 @@ class Admin extends BaseController
     $data = $this->getData('admin');  // BaseController
 
     // Validar la sessión
+    // return validDataSession($token,$rol);
     if (validDataSession($token,$rol)) {
       // Obtener datos del usuario
       $id  = $data['id'];
