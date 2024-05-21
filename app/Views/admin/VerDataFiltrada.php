@@ -22,11 +22,6 @@
             </div>
             <div class="col-4"></div>
         </div>
-        <div class="row">
-            <div class="col-4"></div>
-            <div class="col-1 text-center"><a href="<?=$url_base;?>admin" class="btn btn-secondary"
-                    role="button">Regresar</a></div>
-        </div>
     </div>
 
 
@@ -36,9 +31,9 @@
     </div>
 
     <div class="center mt-3">
-        <a href="<?=$url_base;?>admin" class="btn btn-outline-secondary btn-sm" role="button">Regresar</a>
-        <a class="btn btn-success" id="btnRespuestas">Filtrar Respuestas</a>
-        <a class="btn btn-success" id="btnEncuestas">Filtrar Encuestas</a>
+        <a href="<?=$url_base;?>admin" class="btn btn-secondary" role="button">Regresar</a>
+        <a class="btn btn-success" id="btnEncuestas">Encuestas Enviadas</a>
+        <a class="btn btn-success" id="btnRespuestas">Encuestas Respuestas</a>
         <a class="btn btn-success" id="btnJoin">Beta Join</a>
     </div>
 

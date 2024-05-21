@@ -823,7 +823,7 @@ return $count."<separador>".$salida."<separador>".$tiempo;
 //----------------------------------------------------------------------------------------------------
 
 function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
-  
+
   $salida = "";
   $headTable = "";
   $preguntas ="";
@@ -882,7 +882,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
     from encuestas_preguntas
     WHERE id_encuesta = $ide
     group by id_encuesta";
-    
+
       $cabeceraResult = $db->query($cabeceras);
       $data = $cabeceraResult->getResultArray();
 
@@ -905,10 +905,9 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
     if($total > 0){
       $start_time_consulta = microtime(true);
       do {
-      $query = "SELECT 
+      $query = "SELECT
         id,
         id_encuesta,
-        fechahora,
         fecha,
         hora,
         ip,nombre,correo,telefono,
@@ -943,7 +942,7 @@ function get_encuestas_filtradas2($ide,&$count,$year,$month,$opc) {
 
 
       $registros = $db->query($query);
-      
+
 
       $start_time_cadena = microtime(true);
       foreach ($registros->getResultArray() as $reg) {
@@ -1035,22 +1034,22 @@ function get_data_encuestas($ide,$year,$month) {
 
         $delimiter = ",";
         $filename = "data_enviadas_" . date('Y-m-d') . ".csv";
-        
+
         $f = fopen('php://memory', 'w');
 
         $fields = array('id', 'id_encuesta', 'nombre', 'correo', 'telefono', 'fecha','huella','ip','cod_pais','cod_region','activo');
         fputcsv($f, $fields, $delimiter);
-        
+
         foreach ($registros->getResultArray() as $row) {
           $lineData = array($row['id'], $row['id_encuesta'], $row['nombre'], $row['correo'], $row['telefono'], $row['fecha'], $row['huella'], $row['ip'], $row['cod_pais'], $row['cod_region'], $row['activo']);
             fputcsv($f, $lineData, $delimiter);
         }
-        
+
         fseek($f, 0);
-        
+
         header('Content-Type: text/csv');
         header('Content-Disposition: attachment; filename="' . $filename . '";');
-        
+
         fpassthru($f);
     exit;
 
@@ -1058,13 +1057,13 @@ function get_data_encuestas($ide,$year,$month) {
 
   function get_data_respuestas($ide,$year,$month) {
     // $idenc = encrypt_decrypt('e',$ide);
-    
+
       $db = db_connect();
       $ide  = $db->escapeString(strip_tags($ide));
 
       $inicio = $year.' 00:00:00';
       $fin = $month.' 12:00:00';
-  
+
       // $query = "SELECT * from enviadas_respuestas where id_encuesta = $ide and date_format(fecha,'%m/%Y') = '".$month."/".$year."';";
       $query = "SELECT * from enviadas_respuestas WHERE id_encuesta = $ide AND fecha >= '".$inicio."' AND fecha <= '".$fin."'";
 
@@ -1072,31 +1071,31 @@ function get_data_encuestas($ide,$year,$month) {
 
           $delimiter = ",";
           $filename = "data_respuestas_" . date('Y-m-d') . ".csv";
-          
+
           $f = fopen('php://memory', 'w');
-          
+
           $fields = array('id', 'id_enviada', 'id_encuesta', 'id_pregunta', 'id_opcion', 'respuesta', 'fecha');
           fputcsv($f, $fields, $delimiter);
-          
+
           foreach ($registros->getResultArray() as $row) {
             $lineData = array($row['id'], $row['id_enviada'], $row['id_encuesta'], $row['id_pregunta'], $row['id_opcion'], $row['respuesta'], $row['fecha']);
               fputcsv($f, $lineData, $delimiter);
           }
-          
+
           fseek($f, 0);
-          
+
           header('Content-Type: text/csv');
           header('Content-Disposition: attachment; filename="' . $filename . '";');
-          
+
           fpassthru($f);
-      
+
       exit;
-  
+
     }
 
     function get_data_beta($ide,$year,$month) {
       // $idenc = encrypt_decrypt('e',$ide);
-      
+
         $db = db_connect();
 // ---------------------------------------
 $cabeceras ="SELECT id_encuesta,GROUP_CONCAT(CASE orden WHEN 1 THEN pregunta ELSE NULL END) AS Pregunta_1
@@ -1124,7 +1123,7 @@ $cabeceras ="SELECT id_encuesta,GROUP_CONCAT(CASE orden WHEN 1 THEN pregunta ELS
     from encuestas_preguntas
     WHERE id_encuesta = $ide
     group by id_encuesta";
-    
+
       $cabeceraResult = $db->query($cabeceras);
       $data = $cabeceraResult->getResultArray();
 
@@ -1146,12 +1145,12 @@ $cabeceras ="SELECT id_encuesta,GROUP_CONCAT(CASE orden WHEN 1 THEN pregunta ELS
         $ide  = $db->escapeString(strip_tags($ide));
         $inicio = date_format(date_create($year),"d/m/Y");
         $fin = date_format(date_create($month),"d/m/Y");
-    
+
         // $query = "SELECT * FROM v_encuestas_enviadas
         // WHERE id_encuesta = $ide
         // AND DATE_FORMAT(STR_TO_DATE(fecha,'%d/%m/%Y'),'%m/%Y') ='".$month."/".$year."';";
 
-        $query = "SELECT id,id_encuesta,fechahora,
+        $query = "SELECT id,id_encuesta,
         fecha,
         hora,
         ip,nombre,correo,telefono,
@@ -1182,34 +1181,34 @@ $cabeceras ="SELECT id_encuesta,GROUP_CONCAT(CASE orden WHEN 1 THEN pregunta ELS
         AND STR_TO_DATE(fecha,'%d/%m/%Y')
         BETWEEN STR_TO_DATE('".$inicio."','%d/%m/%Y')
         AND STR_TO_DATE('".$fin."','%d/%m/%Y')";
-        
+
         $registros = $db->query($query);
-  
+
             $delimiter = ",";
             $filename = "data_join_" . date('Y-m-d') . ".csv";
-            
+
             $f = fopen('php://memory', 'w');
 
             // $fields = array('Fecha', 'Hora', 'Nombre', 'Correo', 'Telefono', 'IP','Pregunta 1','Pregunta 2','Pregunta 3','Pregunta 4','Pregunta 5','Pregunta 6','Pregunta 7','Pregunta 8','Pregunta 9','Pregunta 10','Pregunta 11','Pregunta 12','Pregunta 13','Pregunta 14','Pregunta 15','Pregunta 16','Pregunta 17','Pregunta 18','Pregunta 19','Pregunta 20','Pregunta 21','Pregunta 22');
             $fields = $headTable;
             fputcsv($f, $fields, $delimiter);
-            
+
             foreach ($registros->getResultArray() as $row) {
                 $lineData = array($row['fecha'], $row['hora'], $row['nombre'], $row['correo'], $row['telefono'], $row['ip'], $row['Respuesta_1'], $row['Respuesta_2'], $row['Respuesta_3'], $row['Respuesta_4'], $row['Respuesta_5'], $row['Respuesta_6'], $row['Respuesta_7'], $row['Respuesta_8'], $row['Respuesta_9'], $row['Respuesta_10'], $row['Respuesta_11'], $row['Respuesta_12'], $row['Respuesta_13'], $row['Respuesta_14'], $row['Respuesta_15'], $row['Respuesta_16'], $row['Respuesta_17'], $row['Respuesta_18'], $row['Respuesta_19'], $row['Respuesta_20'], $row['Respuesta_21'], $row['Respuesta_22']);
                 fputcsv($f, $lineData, $delimiter);
             }
-            
+
             fseek($f, 0);
-            
+
 
             header('Content-Type: text/csv; charset=utf-8');
             header('Content-Encoding: utf-8');
             header('Content-Disposition: attachment; filename="' . $filename . '";');
-            
+
             fpassthru($f);
-        
+
         exit;
-    
+
       }
 
 /* ---------------------END DATA FILTRADA------------------------- */
